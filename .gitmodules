@@ -1,0 +1,16 @@
+[submodule "module/rebloom"]
+	ignore=all
+	path = module/rebloom
+	url = https://github.com/RedisLabsModules/rebloom.git
+[submodule "module/redis-fpn"]
+	ignore=all
+	path = module/redis-fpn
+	url = https://github.com/infobip/redis-fpn.git
+[submodule "module/zpop"]
+	ignore=all
+	path = module/zpop
+	url = https://github.com/itamarhaber/zpop.git
+[submodule "module/redis-roaring"]
+	ignore=all
+	path = module/redis-roaring
+	url = https://github.com/aviggiano/redis-roaring.git
