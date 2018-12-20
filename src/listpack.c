@@ -712,7 +712,8 @@ unsigned char *lpInsert(unsigned char *lp, unsigned char *ele, uint32_t size, un
 
 /* Append the specified element 'ele' of length 'len' at the end of the
  * listpack. It is implemented in terms of lpInsert(), so the return value is
- * the same as lpInsert(). */
+ * the same as lpInsert().
+ *  */
 unsigned char *lpAppend(unsigned char *lp, unsigned char *ele, uint32_t size) {
     uint64_t listpack_bytes = lpGetTotalBytes(lp);
     unsigned char *eofptr = lp + listpack_bytes - 1;

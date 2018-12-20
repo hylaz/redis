@@ -13,6 +13,7 @@ typedef struct streamID {
     uint64_t seq;       /* Sequence number. */
 } streamID;
 
+
 typedef struct stream {
     rax *rax;               /* The radix tree holding the stream. */
     uint64_t length;        /* Number of elements inside this stream. */
