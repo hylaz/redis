@@ -354,6 +354,8 @@ static sds percentDecode(const char *pe, size_t len) {
  *   authority: [<username> ":"] <password> "@"] [<hostname> [":" <port>]]
  *   path:      ["/" [<db>]]
  *
+ * 分析url地址的正确性
+ * 格式为：redis://user:secret@localhost:6379/0?foo=bar&qux=baz
  *  [1]: https://www.iana.org/assignments/uri-schemes/prov/redis */
 static void parseRedisUri(const char *uri) {
 
@@ -1228,43 +1230,64 @@ static redisReply *reconnectingRedisCommand(redisContext *c, const char *fmt, ..
 /*------------------------------------------------------------------------------
  * User interface
  *--------------------------------------------------------------------------- */
-
+/**
+ * 分析客户端参数
+ * @param int argc 参数数量
+ * @param string[] 参数数组
+ */
 static int parseOptions(int argc, char **argv) {
     int i;
 
     for (i = 1; i < argc; i++) {
+        //是否最后一个参数        
         int lastarg = i==argc-1;
-
+        /**
+         * 分析参数选项，初始化config结构体
+         */ 
+        //ip地址
         if (!strcmp(argv[i],"-h") && !lastarg) {
             sdsfree(config.hostip);
             config.hostip = sdsnew(argv[++i]);
-        } else if (!strcmp(argv[i],"-h") && lastarg) {
+        //帮助信息
+        } else if (!strcmp(argv[i],"-h") && lastarg) {　
             usage();
+        //帮助信息    
         } else if (!strcmp(argv[i],"--help")) {
             usage();
+        //
         } else if (!strcmp(argv[i],"-x")) {
             config.stdinarg = 1;
+        //端口
         } else if (!strcmp(argv[i],"-p") && !lastarg) {
             config.hostport = atoi(argv[++i]);
+        //unix socket 
         } else if (!strcmp(argv[i],"-s") && !lastarg) {
             config.hostsocket = argv[++i];
+        //重复次数
         } else if (!strcmp(argv[i],"-r") && !lastarg) {
             config.repeat = strtoll(argv[++i],NULL,10);
+        //等待多少秒
         } else if (!strcmp(argv[i],"-i") && !lastarg) {
             double seconds = atof(argv[++i]);
             config.interval = seconds*1000000;
+        //数据库编号　默认为０　
         } else if (!strcmp(argv[i],"-n") && !lastarg) {
             config.dbnum = atoi(argv[++i]);
+        //不显示waring信息    
         } else if (!strcmp(argv[i], "--no-auth-warning")) {
             config.no_auth_warning = 1;
+        //验证密码
         } else if (!strcmp(argv[i],"-a") && !lastarg) {
             config.auth = argv[++i];
+        //url地址
         } else if (!strcmp(argv[i],"-u") && !lastarg) {
             parseRedisUri(argv[++i]);
+        //文本行格式输出
         } else if (!strcmp(argv[i],"--raw")) {
             config.output = OUTPUT_RAW;
         } else if (!strcmp(argv[i],"--no-raw")) {
             config.output = OUTPUT_STANDARD;
+        //csv格式输出
         } else if (!strcmp(argv[i],"--csv")) {
             config.output = OUTPUT_CSV;
         } else if (!strcmp(argv[i],"--latency")) {
@@ -1277,11 +1300,14 @@ static int parseOptions(int argc, char **argv) {
         } else if (!strcmp(argv[i],"--latency-history")) {
             config.latency_mode = 1;
             config.latency_history = 1;
+        //lru测试
         } else if (!strcmp(argv[i],"--lru-test") && !lastarg) {
             config.lru_test_mode = 1;
             config.lru_test_sample_size = strtoll(argv[++i],NULL,10);
+        //从服务器模式
         } else if (!strcmp(argv[i],"--slave")) {
             config.slave_mode = 1;
+        //输出统计信息
         } else if (!strcmp(argv[i],"--stat")) {
             config.stat_mode = 1;
         } else if (!strcmp(argv[i],"--scan")) {
@@ -1298,10 +1324,13 @@ static int parseOptions(int argc, char **argv) {
             config.pipe_mode = 1;
         } else if (!strcmp(argv[i],"--pipe-timeout") && !lastarg) {
             config.pipe_timeout = atoi(argv[++i]);
+        //统计键值对大小信息
         } else if (!strcmp(argv[i],"--bigkeys")) {
             config.bigkeys = 1;
+        //统计热点访问键值对
         } else if (!strcmp(argv[i],"--hotkeys")) {
             config.hotkeys = 1;
+        //lua脚本
         } else if (!strcmp(argv[i],"--eval") && !lastarg) {
             config.eval = argv[++i];
         } else if (!strcmp(argv[i],"--ldb")) {
@@ -1311,6 +1340,7 @@ static int parseOptions(int argc, char **argv) {
             config.eval_ldb = 1;
             config.eval_ldb_sync = 1;
             config.output = OUTPUT_RAW;
+        //集群模式
         } else if (!strcmp(argv[i],"-c")) {
             config.cluster_mode = 1;
         } else if (!strcmp(argv[i],"-d") && !lastarg) {
@@ -1442,7 +1472,9 @@ static sds readArgFromStdin(void) {
     }
     return arg;
 }
-
+/**
+ * 帮助信息
+ */
 static void usage(void) {
     sds version = cliVersion();
     fprintf(stderr,
@@ -5331,7 +5363,9 @@ static void latencyModePrint(long long min, long long max, double avg, long long
         printf("%lld %lld %.2f %lld\n", min, max, avg, count);
     }
 }
-
+/**
+ * 延迟监控　向服务器发送ping
+ */ 
 #define LATENCY_SAMPLE_RATE 10 /* milliseconds. */
 #define LATENCY_HISTORY_DEFAULT_INTERVAL 15000 /* milliseconds. */
 static void latencyMode(void) {
@@ -5362,10 +5396,12 @@ static void latencyMode(void) {
         latency = mstime()-start;
         freeReplyObject(reply);
         count++;
+        //次数为１
         if (count == 1) {
             min = max = tot = latency;
             avg = (double) latency;
         } else {
+            //重新设置max,min,tot,avg
             if (latency < min) min = latency;
             if (latency > max) max = latency;
             tot += latency;
@@ -5373,6 +5409,7 @@ static void latencyMode(void) {
         }
 
         if (config.output == OUTPUT_STANDARD) {
+            //标准输出
             printf("\x1b[0G\x1b[2K"); /* Clear the line. */
             latencyModePrint(min,max,avg,count);
         } else {
@@ -5390,6 +5427,7 @@ static void latencyMode(void) {
             history_start = mstime();
             min = max = tot = count = 0;
         }
+        //暂停指定时间
         usleep(LATENCY_SAMPLE_RATE * 1000);
     }
 }
@@ -5457,7 +5495,9 @@ void showLatencyDistLegend(void) {
     printf("\033[0m\n");
     printf("---------------------------------------------\n");
 }
-
+/**
+ * 延时监控实现
+ */ 
 static void latencyDistMode(void) {
     redisReply *reply;
     long long start, latency, count = 0;
@@ -5541,7 +5581,8 @@ static void latencyDistMode(void) {
  *--------------------------------------------------------------------------- */
 
 /* Sends SYNC and reads the number of bytes in the payload. Used both by
- * slaveMode() and getRDB(). */
+ * slaveMode() and getRDB(). 
+ * 发送sync命令　*/
 unsigned long long sendSync(int fd) {
     /* To start we need to send the SYNC command and return the payload.
      * The hiredis client lib does not understand this part of the protocol
@@ -5608,20 +5649,23 @@ static void slaveMode(void) {
  *--------------------------------------------------------------------------- */
 
 /* This function implements --rdb, so it uses the replication protocol in order
- * to fetch the RDB file from a remote server. */
+ * to fetch the RDB file from a remote server. 
+ * 获取远程服务器的rdb文件*/
 static void getRDB(void) {
     int s = context->fd;
     int fd;
     unsigned long long payload = sendSync(s);
     char buf[4096];
-
+    //获取发送多少字节数据
     fprintf(stderr,"SYNC sent to master, writing %llu bytes to '%s'\n",
         payload, config.rdb_filename);
 
     /* Write to file. */
     if (!strcmp(config.rdb_filename,"-")) {
+        //标准输出
         fd = STDOUT_FILENO;
     } else {
+        //输出到文件
         fd = open(config.rdb_filename, O_CREAT|O_WRONLY, 0644);
         if (fd == -1) {
             fprintf(stderr, "Error opening '%s': %s\n", config.rdb_filename,
@@ -5646,10 +5690,15 @@ static void getRDB(void) {
         }
         payload -= nread;
     }
+    //关闭fsync
     close(s); /* Close the file descriptor ASAP as fsync() may take time. */
+    //同步文件到硬盘
     fsync(fd);
+    //关闭文件描述符
     close(fd);
+    //输出成功信息
     fprintf(stderr,"Transfer finished with success.\n");
+    //退出   
     exit(0);
 }
 
@@ -5825,7 +5874,9 @@ static void pipeMode(void) {
 #define TYPE_STREAM 5
 #define TYPE_NONE   6
 #define TYPE_COUNT  7
-
+/**
+ * 发送scan命令　
+ */ 
 static redisReply *sendScan(unsigned long long *it) {
     redisReply *reply = redisCommand(context, "SCAN %llu", *it);
 
@@ -5853,7 +5904,9 @@ static redisReply *sendScan(unsigned long long *it) {
 
     return reply;
 }
-
+/**
+ * 获取db的大小
+ */ 
 static int getDbSize(void) {
     redisReply *reply;
     int size;
@@ -5871,7 +5924,9 @@ static int getDbSize(void) {
 
     return size;
 }
-
+/**
+ * 数据结构类型转化成字符串
+ */ 
 static int toIntType(char *key, char *type) {
     if(!strcmp(type, "string")) {
         return TYPE_STRING;
@@ -5892,17 +5947,19 @@ static int toIntType(char *key, char *type) {
         exit(1);
     }
 }
-
+/**
+ * 获取keys类型
+ */ 
 static void getKeyTypes(redisReply *keys, int *types) {
     redisReply *reply;
     unsigned int i;
 
-    /* Pipeline TYPE commands */
+    /* Pipeline TYPE commands　管道形式发送命令 */
     for(i=0;i<keys->elements;i++) {
         redisAppendCommand(context, "TYPE %s", keys->element[i]->str);
     }
 
-    /* Retrieve types */
+    /* Retrieve types 读取返回值*/
     for(i=0;i<keys->elements;i++) {
         if(redisGetReply(context, (void**)&reply)!=REDIS_OK) {
             fprintf(stderr, "Error getting type for key '%s' (%d: %s)\n",
@@ -5923,7 +5980,9 @@ static void getKeyTypes(redisReply *keys, int *types) {
         freeReplyObject(reply);
     }
 }
-
+/**
+ * 获取keys大小
+ */ 
 static void getKeySizes(redisReply *keys, int *types,
                         unsigned long long *sizes)
 {
@@ -5968,7 +6027,9 @@ static void getKeySizes(redisReply *keys, int *types,
         freeReplyObject(reply);
     }
 }
-
+/**
+ * 找到最大big键值对
+ */ 
 static void findBigKeys(void) {
     unsigned long long biggest[TYPE_COUNT] = {0}, counts[TYPE_COUNT] = {0}, totalsize[TYPE_COUNT] = {0};
     unsigned long long sampled = 0, total_keys, totlen=0, *sizes=NULL, it=0;
@@ -6099,7 +6160,7 @@ static void findBigKeys(void) {
     /* Success! */
     exit(0);
 }
-
+/**获取keys的*/
 static void getKeyFreqs(redisReply *keys, unsigned long long *freqs) {
     redisReply *reply;
     unsigned int i;
@@ -6131,6 +6192,7 @@ static void getKeyFreqs(redisReply *keys, unsigned long long *freqs) {
 }
 
 #define HOTKEYS_SAMPLE 16
+/**热点keys实现*/
 static void findHotKeys(void) {
     redisReply *keys, *reply;
     unsigned long long counters[HOTKEYS_SAMPLE] = {0};
@@ -6283,7 +6345,7 @@ void bytesToHuman(char *s, long long n) {
         sprintf(s,"%.2fG",d);
     }
 }
-
+/**服务器的各项指标信息*/
 static void statMode(void) {
     redisReply *reply;
     long aux, requests = 0;
@@ -6651,7 +6713,7 @@ int main(int argc, char **argv) {
         clusterManagerMode(proc);
     }
 
-    /* Latency mode */
+    /* Latency mode 延时监控*/
     if (config.latency_mode) {
         if (cliConnect(0) == REDIS_ERR) exit(1);
         latencyMode();
@@ -6669,44 +6731,44 @@ int main(int argc, char **argv) {
         slaveMode();
     }
 
-    /* Get RDB mode. */
+    /* Get RDB mode.　导出RDB模式 */
     if (config.getrdb_mode) {
         if (cliConnect(0) == REDIS_ERR) exit(1);
         getRDB();
     }
 
-    /* Pipe mode */
+    /* Pipe mode 管道模式*/
     if (config.pipe_mode) {
         if (cliConnect(0) == REDIS_ERR) exit(1);
         pipeMode();
     }
 
-    /* Find big keys */
+    /* Find big keys 找到大键值对*/
     if (config.bigkeys) {
         if (cliConnect(0) == REDIS_ERR) exit(1);
         findBigKeys();
     }
 
-    /* Find hot keys */
+    /* Find hot keys 找到热点key*/
     if (config.hotkeys) {
         if (cliConnect(0) == REDIS_ERR) exit(1);
         findHotKeys();
     }
 
-    /* Stat mode */
+    /* Stat mode 数据统计模式*/
     if (config.stat_mode) {
         if (cliConnect(0) == REDIS_ERR) exit(1);
         if (config.interval == 0) config.interval = 1000000;
         statMode();
     }
 
-    /* Scan mode */
+    /* Scan mode 遍历模式*/
     if (config.scan_mode) {
         if (cliConnect(0) == REDIS_ERR) exit(1);
         scanMode();
     }
 
-    /* LRU test mode */
+    /* LRU test mode　lru测试 */
     if (config.lru_test_mode) {
         if (cliConnect(0) == REDIS_ERR) exit(1);
         LRUTestMode();
