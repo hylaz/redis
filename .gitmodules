@@ -18,3 +18,6 @@
 	ignore=all
 	path = plugins/dynomite
 	url = https://github.com/Netflix/dynomite.git
+[submodule "module/redisGraph"]
+	path = module/redisGraph
+	url = https://github.com/RedisLabsModules/RedisGraph.git
