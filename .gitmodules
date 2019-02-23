@@ -14,3 +14,7 @@
 	ignore=all
 	path = module/redis-roaring
 	url = https://github.com/aviggiano/redis-roaring.git
+[submodule "plugins/dynomite"]
+	ignore=all
+	path = plugins/dynomite
+	url = https://github.com/Netflix/dynomite.git
