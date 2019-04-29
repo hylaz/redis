@@ -1,0 +1,8 @@
+conf/
+html/
+objs/
+man/
+nginx/
+deps/
+.idea/
+.vscode/
