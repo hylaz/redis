@@ -20,4 +20,13 @@
 	url = https://github.com/Netflix/dynomite.git
 [submodule "module/redisGraph"]
 	path = module/redisGraph
+	ignore=all
 	url = https://github.com/RedisLabsModules/RedisGraph.git
+[submodule "plugins/RedisShake"]
+	path = plugins/RedisShake
+	ignore=all
+	url = https://github.com/alibaba/RedisShake.git
+[submodule "plugins/Redis-full-check"]
+	path = plugins/Redis-full-check
+	ignore=all
+	url = https://github.com/alibaba/RedisFullCheck.git
