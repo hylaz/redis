@@ -30,3 +30,7 @@
 	path = plugins/Redis-full-check
 	ignore=all
 	url = https://github.com/alibaba/RedisFullCheck.git
+[submodule "plugins/overlord"]
+	path = plugins/overlord
+	ignore=all
+	url = https://github.com/bilibili/overlord.git
