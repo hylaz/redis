@@ -112,7 +112,9 @@ void resizeReplicationBacklog(long long newsize) {
         server.repl_backlog_off = server.master_repl_offset+1;
     }
 }
-
+/**
+ * 释放backlog
+ */ 
 void freeReplicationBacklog(void) {
     serverAssert(listLength(server.slaves) == 0);
     zfree(server.repl_backlog);
@@ -1859,7 +1861,9 @@ write_error: /* Handle sendSynchronousCommand(SYNC_CMD_WRITE) errors. */
     sdsfree(err);
     goto error;
 }
-
+/**
+ * 连接master
+ */ 
 int connectWithMaster(void) {
     int fd;
 
