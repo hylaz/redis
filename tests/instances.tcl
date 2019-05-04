@@ -134,7 +134,7 @@ proc abort_sentinel_test msg {
     cleanup
     exit 1
 }
-
+# 分析选项
 proc parse_options {} {
     for {set j 0} {$j < [llength $::argv]} {incr j} {
         set opt [lindex $::argv $j]

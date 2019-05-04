@@ -612,7 +612,9 @@ static redisContext *redisContextInit(void) {
 
     return c;
 }
-
+/**
+ * 释放redisContext
+ */ 
 void redisFree(redisContext *c) {
     if (c == NULL)
         return;

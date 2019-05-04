@@ -3,6 +3,7 @@
 # more information.
 
 cd tests/cluster
+
 source cluster.tcl
 source ../instances.tcl
 source ../../support/cluster.tcl ; # Redis Cluster client.

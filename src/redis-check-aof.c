@@ -47,7 +47,10 @@ int consumeNewline(char *buf) {
     }
     return 1;
 }
-
+/**
+ * 
+ * 读取long
+ */ 
 int readLong(FILE *fp, char prefix, long *target) {
     char buf[128], *eptr;
     epos = ftello(fp);
@@ -62,6 +65,9 @@ int readLong(FILE *fp, char prefix, long *target) {
     return consumeNewline(eptr);
 }
 
+/**
+ * 读取字节
+ */ 
 int readBytes(FILE *fp, char *target, long length) {
     long real;
     epos = ftello(fp);
@@ -73,6 +79,10 @@ int readBytes(FILE *fp, char *target, long length) {
     return 1;
 }
 
+/**
+ * 
+ * 读取字符串
+ */ 
 int readString(FILE *fp, char** target) {
     long len;
     *target = NULL;
@@ -93,6 +103,9 @@ int readString(FILE *fp, char** target) {
     return 1;
 }
 
+/**
+ * 读取参数的个数
+ */ 
 int readArgc(FILE *fp, long *target) {
     return readLong(fp,'*',target);
 }
@@ -140,7 +153,9 @@ off_t process(FILE *fp) {
     }
     return pos;
 }
-
+/**
+ * 入口函数
+ */ 
 int redis_check_aof_main(int argc, char **argv) {
     char *filename;
     int fix = 0;

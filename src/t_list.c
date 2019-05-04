@@ -35,7 +35,7 @@
 
 /* The function pushes an element to the specified list object 'subject',
  * at head or tail position as specified by 'where'.
- *
+ * 添加值到list中
  * There is no need for the caller to increment the refcount of 'value' as
  * the function takes care of it if needed. */
 void listTypePush(robj *subject, robj *value, int where) {

@@ -121,7 +121,9 @@ static long long mstime(void) {
     mst += tv.tv_usec/1000;
     return mst;
 }
-
+/**
+ * 释放client
+ */ 
 static void freeClient(client c) {
     listNode *ln;
     aeDeleteFileEvent(config.el,c->context->fd,AE_WRITABLE);
@@ -136,6 +138,9 @@ static void freeClient(client c) {
     listDelNode(config.clients,ln);
 }
 
+/**
+ * 释放所有的客户端
+ */ 
 static void freeAllClients(void) {
     listNode *ln = config.clients->head, *next;
 
@@ -146,6 +151,9 @@ static void freeAllClients(void) {
     }
 }
 
+/**
+ * 重置client
+ */ 
 static void resetClient(client c) {
     aeDeleteFileEvent(config.el,c->context->fd,AE_WRITABLE);
     aeDeleteFileEvent(config.el,c->context->fd,AE_READABLE);
@@ -170,6 +178,10 @@ static void randomizeClientKey(client c) {
     }
 }
 
+/**
+ * 
+ * 客户端处理完成
+ */ 
 static void clientDone(client c) {
     if (config.requests_finished == config.requests) {
         freeClient(c);
@@ -186,6 +198,10 @@ static void clientDone(client c) {
     }
 }
 
+/**
+ * 
+ * 
+ */ 
 static void readHandler(aeEventLoop *el, int fd, void *privdata, int mask) {
     client c = privdata;
     void *reply = NULL;
@@ -255,6 +271,9 @@ static void readHandler(aeEventLoop *el, int fd, void *privdata, int mask) {
     }
 }
 
+/**
+ * 写事件
+ */ 
 static void writeHandler(aeEventLoop *el, int fd, void *privdata, int mask) {
     client c = privdata;
     UNUSED(el);
@@ -428,6 +447,9 @@ static int compareLatency(const void *a, const void *b) {
     return (*(long long*)a)-(*(long long*)b);
 }
 
+/**
+ * 展示报告
+ */ 
 static void showLatencyReport(void) {
     int i, curlat = 0;
     float perc, reqpersec;
@@ -458,6 +480,9 @@ static void showLatencyReport(void) {
     }
 }
 
+/**
+ * 压力测试
+ */ 
 static void benchmark(char *title, char *cmd, int len) {
     client c;
 
@@ -476,7 +501,10 @@ static void benchmark(char *title, char *cmd, int len) {
     freeAllClients();
 }
 
-/* Returns number of consumed options. */
+
+/**
+ * 分析参数
+ *  Returns number of consumed options. */
 int parseOptions(int argc, const char **argv) {
     int i;
     int lastarg;
@@ -645,6 +673,10 @@ int test_is_selected(char *name) {
     return strstr(config.tests,buf) != NULL;
 }
 
+/**
+ * 
+ * 入口函数
+ */
 int main(int argc, const char **argv) {
     int i;
     char *data, *cmd;

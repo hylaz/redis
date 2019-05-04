@@ -48,7 +48,10 @@ size_t streamReplyWithRangeFromConsumerPEL(client *c, stream *s, streamID *start
  * Low level stream encoding: a radix tree of listpacks.
  * ----------------------------------------------------------------------- */
 
-/* Create a new stream data structure. */
+/**
+ *  创建stream
+ *  Create a new stream data structure. 
+ */
 stream *streamNew(void) {
 
     stream *s = zmalloc(sizeof(*s));
@@ -60,7 +63,9 @@ stream *streamNew(void) {
     return s;
 }
 
-/* Free a stream, including the listpacks stored inside the radix tree. */
+/**
+ *  释放stream
+ *  Free a stream, including the listpacks stored inside the radix tree. */
 void freeStream(stream *s) {
     raxFreeWithCallback(s->rax,(void(*)(void*))lpFree);
     if (s->cgroups)
@@ -68,7 +73,9 @@ void freeStream(stream *s) {
     zfree(s);
 }
 
-/* Generate the next stream item ID given the previous one. If the current
+/**
+ * 生成streamID
+ * Generate the next stream item ID given the previous one. If the current
  * milliseconds Unix time is greater than the previous one, just use this
  * as time part and start with sequence part of zero. Otherwise we use the
  * previous time (and never go backward) and increment the sequence. */
@@ -83,12 +90,14 @@ void streamNextID(streamID *last_id, streamID *new_id) {
     }
 }
 
-/* This is just a wrapper for lpAppend() to directly use a 64 bit integer
+/**
+ * 追加value到lp
+ * This is just a wrapper for lpAppend() to directly use a 64 bit integer
  * instead of a string. */
 unsigned char *lpAppendInteger(unsigned char *lp, int64_t value) {
     char buf[LONG_STR_SIZE];
     int slen = ll2string(buf,sizeof(buf),value);
-    return lpAp++-pend(lp,(unsigned char*)buf,slen);
+    return lpAppend(lp,(unsigned char*)buf,slen);
 }
 
 /* This is just a wrapper for lpReplace() to directly use a 64 bit integer
@@ -101,7 +110,9 @@ unsigned char *lpReplaceInteger(unsigned char *lp, unsigned char **pos, int64_t 
     return lpInsert(lp, (unsigned char*)buf, slen, *pos, LP_REPLACE, pos);
 }
 
-/* This is a wrapper function for lpGet() to directly get an integer value
+/**
+ * 获取最新的ele
+ * This is a wrapper function for lpGet() to directly get an integer value
  * from the listpack (that may store numbers as a string), converting
  * the string if needed. */
 int64_t lpGetInteger(unsigned char *ele) {
@@ -131,8 +142,12 @@ void streamLogListpackContent(unsigned char *lp) {
     }
 }
 
-/* Convert the specified stream entry ID as a 128 bit big endian number, so
- * that the IDs can be sorted lexicographically. */
+/**
+ * 转化stream
+ * Convert the specified stream entry ID as a 128 bit big endian number, so
+ * that the IDs can be sorted lexicographically.
+ *   
+ */
 void streamEncodeID(void *buf, streamID *id) {
     uint64_t e[2];
     e[0] = htonu64(id->ms);
@@ -142,7 +157,9 @@ void streamEncodeID(void *buf, streamID *id) {
 
 /* This is the reverse of streamEncodeID(): the decoded ID will be stored
  * in the 'id' structure passed by reference. The buffer 'buf' must point
- * to a 128 bit big-endian encoded ID. */
+ * to a 128 bit big-endian encoded ID. 
+ * 转化streamID 
+ */
 void streamDecodeID(void *buf, streamID *id) {
     uint64_t e[2];
     memcpy(e,buf,sizeof(e));
@@ -1116,7 +1133,11 @@ int streamParseStrictIDOrReply(client *c, robj *o, streamID *id, uint64_t missin
 }
 
 
-/* XADD key [MAXLEN <count>] <ID or *> [field value] [field value] ... */
+/**
+ * xadd 命令数据 
+ *  XADD key [MAXLEN <count>] <ID or *> [field value] [field value] ...
+ * 
+ */
 void xaddCommand(client *c) {
     streamID id;
     int id_given = 0; /* Was an ID different than "*" specified? */

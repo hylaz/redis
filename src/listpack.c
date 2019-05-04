@@ -212,7 +212,11 @@ unsigned char *lpNew(void) {
     return lp;
 }
 
-/* Free the specified listpack. */
+/**
+ * 释放listpack
+ *  Free the specified listpack. 
+ * 
+ */
 void lpFree(unsigned char *lp) {
     lp_free(lp);
 }
