@@ -71,6 +71,9 @@ static int _dictInit(dict *ht, dictType *type, void *privDataPtr);
 
 /* -------------------------- hash functions -------------------------------- */
 
+/**
+ * 设置dict seed
+ */ 
 static uint8_t dict_hash_function_seed[16];
 
 void dictSetHashFunctionSeed(uint8_t *seed) {
@@ -83,7 +86,10 @@ uint8_t *dictGetHashFunctionSeed(void) {
 
 /* The default hashing function uses SipHash implementation
  * in siphash.c. */
-
+/**
+ * hash算法实现 
+ * 
+ */ 
 uint64_t siphash(const uint8_t *in, const size_t inlen, const uint8_t *k);
 uint64_t siphash_nocase(const uint8_t *in, const size_t inlen, const uint8_t *k);
 
@@ -99,6 +105,10 @@ uint64_t dictGenCaseHashFunction(const unsigned char *buf, int len) {
 
 /* Reset a hash table already initialized with ht_init().
  * NOTE: This function should only be called by ht_destroy(). */
+/**
+ * 重置dictht
+ * 
+ */ 
 static void _dictReset(dictht *ht)
 {
     ht->table = NULL;
@@ -107,6 +117,9 @@ static void _dictReset(dictht *ht)
     ht->used = 0;
 }
 
+/**
+ * 创建dict
+ */ 
 /* Create a new hash table */
 dict *dictCreate(dictType *type,
         void *privDataPtr)
@@ -116,7 +129,9 @@ dict *dictCreate(dictType *type,
     _dictInit(d,type,privDataPtr);
     return d;
 }
-
+/**
+ * 初始化dict
+ */ 
 /* Initialize the hash table */
 int _dictInit(dict *d, dictType *type,
         void *privDataPtr)
@@ -130,6 +145,9 @@ int _dictInit(dict *d, dictType *type,
     return DICT_OK;
 }
 
+/**
+ * 重置dict
+ */ 
 /* Resize the table to the minimal size that contains all the elements,
  * but with the invariant of a USED/BUCKETS ratio near to <= 1 */
 int dictResize(dict *d)
@@ -143,6 +161,9 @@ int dictResize(dict *d)
     return dictExpand(d, minimal);
 }
 
+/**
+ * 扩容或者创建dict
+ */ 
 /* Expand or create the hash table */
 int dictExpand(dict *d, unsigned long size)
 {
@@ -230,6 +251,9 @@ int dictRehash(dict *d, int n) {
     return 1;
 }
 
+/**
+ * 毫秒时间
+ */ 
 long long timeInMilliseconds(void) {
     struct timeval tv;
 
@@ -261,6 +285,9 @@ static void _dictRehashStep(dict *d) {
     if (d->iterators == 0) dictRehash(d,1);
 }
 
+/**
+ * 添加key val到dict中
+ */ 
 /* Add an element to the target hash table */
 int dictAdd(dict *d, void *key, void *val)
 {
@@ -605,6 +632,9 @@ void dictReleaseIterator(dictIterator *iter)
     zfree(iter);
 }
 
+/**
+ * 返回随机key
+ */ 
 /* Return a random entry from the hash table. Useful to
  * implement randomized algorithms */
 dictEntry *dictGetRandomKey(dict *d)
@@ -918,6 +948,9 @@ unsigned long dictScan(dict *d,
 
 /* ------------------------- private functions ------------------------------ */
 
+/**
+ * 是否需要扩容dict
+ */ 
 /* Expand the hash table if needed */
 static int _dictExpandIfNeeded(dict *d)
 {
@@ -940,6 +973,9 @@ static int _dictExpandIfNeeded(dict *d)
     return DICT_OK;
 }
 
+/**
+ * hash table 容量
+ */ 
 /* Our hash table capability is a power of two */
 static unsigned long _dictNextPower(unsigned long size)
 {

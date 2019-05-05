@@ -67,7 +67,9 @@
 
 int serveClientBlockedOnList(client *receiver, robj *key, robj *dstkey, redisDb *db, robj *value, int where);
 
-/* Get a timeout value from an object and store it into 'timeout'.
+/**
+ * 获取时间
+ * Get a timeout value from an object and store it into 'timeout'.
  * The final timeout is always stored as milliseconds as a time where the
  * timeout will expire, however the parsing is performed according to
  * the 'unit' that can be seconds or milliseconds.
