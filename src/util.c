@@ -43,6 +43,10 @@
 #include "util.h"
 #include "sha1.h"
 
+/**
+ * 
+ * 字符串匹配
+ */ 
 /* Glob-style pattern matching. */
 int stringmatchlen(const char *pattern, int patternLen,
         const char *string, int stringLen, int nocase)
@@ -229,6 +233,10 @@ long long memtoll(const char *p, int *err) {
     return val*mul;
 }
 
+/**
+ * 
+ * v包含多少位
+ */ 
 /* Return the number of digits of 'v' when converted to string in radix 10.
  * See ll2string() for more information. */
 uint32_t digits10(uint64_t v) {

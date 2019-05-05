@@ -1534,7 +1534,7 @@ unsigned int delKeysInSlot(unsigned int hashslot) {
     raxStop(&iter);
     return j;
 }
-
+/* slot中key的数量 */
 unsigned int countKeysInSlot(unsigned int hashslot) {
     return server.cluster->slots_keys_count[hashslot];
 }

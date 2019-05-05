@@ -3604,6 +3604,9 @@ void clusterBeforeSleep(void) {
     server.cluster->todo_before_sleep = 0;
 }
 
+/**
+ * 设置集群的flag
+ */ 
 void clusterDoBeforeSleep(int flags) {
     server.cluster->todo_before_sleep |= flags;
 }
@@ -3693,6 +3696,9 @@ int clusterNodeGetSlotBit(clusterNode *n, int slot) {
  * serve. Return C_OK if the operation ended with success.
  * If the slot is already assigned to another instance this is considered
  * an error and C_ERR is returned. */
+/**
+ * 添加指定slot为node
+ */ 
 int clusterAddSlot(clusterNode *n, int slot) {
     if (server.cluster->slots[slot]) return C_ERR;
     clusterNodeSetSlotBit(n,slot);
@@ -3703,6 +3709,9 @@ int clusterAddSlot(clusterNode *n, int slot) {
 /* Delete the specified slot marking it as unassigned.
  * Returns C_OK if the slot was assigned, otherwise if the slot was
  * already unassigned C_ERR is returned. */
+/**
+ * 删除指定slot
+ */ 
 int clusterDelSlot(int slot) {
     clusterNode *n = server.cluster->slots[slot];
 
@@ -3714,6 +3723,9 @@ int clusterDelSlot(int slot) {
 
 /* Delete all the slots associated with the specified node.
  * The number of deleted slots is returned. */
+/**
+ * 删除指定节点所有slot
+ */ 
 int clusterDelNodeSlots(clusterNode *node) {
     int deleted = 0, j;
 
@@ -3955,6 +3967,9 @@ static struct redisNodeFlags redisNodeFlagsTable[] = {
 
 /* Concatenate the comma separated list of node flags to the given SDS
  * string 'ci'. */
+/**
+ * 生成节点的flag
+ */ 
 sds representClusterNodeFlags(sds ci, uint16_t flags) {
     size_t orig_len = sdslen(ci);
     int i, size = sizeof(redisNodeFlagsTable)/sizeof(struct redisNodeFlags);
@@ -3970,7 +3985,7 @@ sds representClusterNodeFlags(sds ci, uint16_t flags) {
 
 /* Generate a csv-alike representation of the specified cluster node.
  * See clusterGenNodesDescription() top comment for more information.
- *
+ * 生成一个节点的信息
  * The function returns the string representation as an SDS string. */
 sds clusterGenNodeDescription(clusterNode *node) {
     int j, start;
@@ -4046,6 +4061,8 @@ sds clusterGenNodeDescription(clusterNode *node) {
  * include all the known nodes in the representation, including nodes in
  * the HANDSHAKE state.
  *
+ * 生成集群中节点信息
+ * 
  * The representation obtained using this function is used for the output
  * of the CLUSTER NODES function, and as format for the cluster
  * configuration file (nodes.conf) for a given node. */
@@ -4100,6 +4117,9 @@ int getSlotOrReply(client *c, robj *o) {
     return (int) slot;
 }
 
+/**
+ * slot信息
+ */ 
 void clusterReplyMultiBulkSlots(client *c) {
     /* Format: 1) 1) start slot
      *            2) end slot
@@ -4173,7 +4193,9 @@ void clusterReplyMultiBulkSlots(client *c) {
     dictReleaseIterator(di);
     setDeferredMultiBulkLength(c, slot_replylen, num_masters);
 }
-
+/**
+ * cluster命令实现
+ */ 
 void clusterCommand(client *c) {
     if (server.cluster_enabled == 0) {
         addReplyError(c,"This instance has cluster support disabled");
@@ -4237,6 +4259,7 @@ NULL
         }
     } else if (!strcasecmp(c->argv[1]->ptr,"nodes") && c->argc == 2) {
         /* CLUSTER NODES */
+        /* 获取集群的所有的节点 */
         robj *o;
         sds ci = clusterGenNodesDescription(0);
 
@@ -4248,9 +4271,11 @@ NULL
         addReplyBulkCBuffer(c,myself->name, CLUSTER_NAMELEN);
     } else if (!strcasecmp(c->argv[1]->ptr,"slots") && c->argc == 2) {
         /* CLUSTER SLOTS */
+        /* slots信息 */
         clusterReplyMultiBulkSlots(c);
     } else if (!strcasecmp(c->argv[1]->ptr,"flushslots") && c->argc == 2) {
         /* CLUSTER FLUSHSLOTS */
+        /* 数据为空 */
         if (dictSize(server.db[0].dict) != 0) {
             addReplyError(c,"DB must be empty to perform CLUSTER FLUSHSLOTS.");
             return;
@@ -4263,6 +4288,10 @@ NULL
     {
         /* CLUSTER ADDSLOTS <slot> [slot] ... */
         /* CLUSTER DELSLOTS <slot> [slot] ... */
+        /**
+         * 删除或者增加slot
+         */ 
+
         int j, slot;
         unsigned char *slots = zmalloc(CLUSTER_SLOTS);
         int del = !strcasecmp(c->argv[1]->ptr,"delslots");
@@ -4503,6 +4532,7 @@ NULL
         addReplyLongLong(c,keyHashSlot(key,sdslen(key)));
     } else if (!strcasecmp(c->argv[1]->ptr,"countkeysinslot") && c->argc == 3) {
         /* CLUSTER COUNTKEYSINSLOT <slot> */
+        /* 计算slot中keys数量 */
         long long slot;
 
         if (getLongLongFromObjectOrReply(c,c->argv[2],&slot,NULL) != C_OK)
@@ -4514,6 +4544,7 @@ NULL
         addReplyLongLong(c,countKeysInSlot(slot));
     } else if (!strcasecmp(c->argv[1]->ptr,"getkeysinslot") && c->argc == 4) {
         /* CLUSTER GETKEYSINSLOT <slot> <count> */
+        /* 获取slot中指定数量的key */
         long long maxkeys, slot;
         unsigned int numkeys, j;
         robj **keys;
@@ -4543,6 +4574,7 @@ NULL
         zfree(keys);
     } else if (!strcasecmp(c->argv[1]->ptr,"forget") && c->argc == 3) {
         /* CLUSTER FORGET <NODE ID> */
+        /* 指定node加入黑名单 */
         clusterNode *n = clusterLookupNode(c->argv[2]->ptr);
 
         if (!n) {
@@ -4599,6 +4631,7 @@ NULL
         addReply(c,shared.ok);
     } else if (!strcasecmp(c->argv[1]->ptr,"slaves") && c->argc == 3) {
         /* CLUSTER SLAVES <NODE ID> */
+        /* 获取指定节点的从节点 */
         clusterNode *n = clusterLookupNode(c->argv[2]->ptr);
         int j;
 
@@ -4623,6 +4656,7 @@ NULL
                c->argc == 3)
     {
         /* CLUSTER COUNT-FAILURE-REPORTS <NODE ID> */
+        /* 计算节点的失败的报告 */
         clusterNode *n = clusterLookupNode(c->argv[2]->ptr);
 
         if (!n) {
@@ -4759,7 +4793,10 @@ NULL
  * DUMP, RESTORE and MIGRATE commands
  * -------------------------------------------------------------------------- */
 
-/* Generates a DUMP-format representation of the object 'o', adding it to the
+
+/**
+ * 生成dump-format格式的键值对
+ * Generates a DUMP-format representation of the object 'o', adding it to the
  * io stream pointed by 'rio'. This function can't fail. */
 void createDumpPayload(rio *payload, robj *o) {
     unsigned char buf[2];
@@ -4790,6 +4827,9 @@ void createDumpPayload(rio *payload, robj *o) {
     payload->io.buffer.ptr = sdscatlen(payload->io.buffer.ptr,&crc,8);
 }
 
+/**
+ * 验证rdb的版本和类型       
+ */ 
 /* Verify that the RDB version of the dump payload matches the one of this Redis
  * instance and that the checksum is ok.
  * If the DUMP payload looks valid C_OK is returned, otherwise C_ERR
@@ -4813,7 +4853,9 @@ int verifyDumpPayload(unsigned char *p, size_t len) {
     return (memcmp(&crc,footer+2,8) == 0) ? C_OK : C_ERR;
 }
 
-/* DUMP keyname
+/**
+ * 导出key值
+ * DUMP keyname
  * DUMP is actually not used by Redis Cluster but it is the obvious
  * complement of RESTORE and can be useful for different applications. */
 void dumpCommand(client *c) {
@@ -4836,6 +4878,9 @@ void dumpCommand(client *c) {
     return;
 }
 
+/**
+ * 导入key
+ */
 /* RESTORE key ttl serialized-value [REPLACE] */
 void restoreCommand(client *c) {
     long long ttl, lfu_freq = -1, lru_idle = -1, lru_clock = -1;
@@ -4963,7 +5008,9 @@ migrateCachedSocket* migrateGetSocket(client *c, robj *host, robj *port, long ti
         return cs;
     }
 
-    /* No cached socket, create one. */
+    /**
+     * 随机删除一个
+     *  No cached socket, create one. */
     if (dictSize(server.migrate_cached_sockets) == MIGRATE_SOCKET_CACHE_ITEMS) {
         /* Too many items, drop one at random. */
         dictEntry *de = dictGetRandomKey(server.migrate_cached_sockets);
@@ -5002,7 +5049,9 @@ migrateCachedSocket* migrateGetSocket(client *c, robj *host, robj *port, long ti
     return cs;
 }
 
-/* Free a migrate cached connection. */
+/**
+ * 释放socket
+ * Free a migrate cached connection. */
 void migrateCloseSocket(robj *host, robj *port) {
     sds name = sdsempty();
     migrateCachedSocket *cs;
@@ -5022,6 +5071,9 @@ void migrateCloseSocket(robj *host, robj *port) {
     sdsfree(name);
 }
 
+/**
+ * 关闭超时的socket
+ */ 
 void migrateCloseTimedoutSockets(void) {
     dictIterator *di = dictGetSafeIterator(server.migrate_cached_sockets);
     dictEntry *de;
@@ -5363,7 +5415,9 @@ socket_err:
  * Cluster functions related to serving / redirecting clients
  * -------------------------------------------------------------------------- */
 
-/* The ASKING command is required after a -ASK redirection.
+/**
+ * asking命令
+ * The ASKING command is required after a -ASK redirection.
  * The client should issue ASKING before to actually send the command to
  * the target instance. See the Redis Cluster specification for more
  * information. */
@@ -5376,7 +5430,9 @@ void askingCommand(client *c) {
     addReply(c,shared.ok);
 }
 
-/* The READONLY command is used by clients to enter the read-only mode.
+/**
+ * readonly命令实现
+ * The READONLY command is used by clients to enter the read-only mode.
  * In this mode slaves will not redirect clients as long as clients access
  * with read-only commands to keys that are served by the slave's master. */
 void readonlyCommand(client *c) {
@@ -5388,6 +5444,9 @@ void readonlyCommand(client *c) {
     addReply(c,shared.ok);
 }
 
+/**
+ * 清除readonly命令
+ */ 
 /* The READWRITE command just clears the READONLY command state. */
 void readwriteCommand(client *c) {
     c->flags &= ~CLIENT_READONLY;

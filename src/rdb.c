@@ -87,6 +87,9 @@ void rdbLoadRaw(rio *rdb, void *buf, uint64_t len) {
     }
 }
 
+/**
+ * 保存类型
+ */ 
 int rdbSaveType(rio *rdb, unsigned char type) {
     return rdbWriteRaw(rdb,&type,1);
 }
@@ -621,6 +624,9 @@ int rdbLoadBinaryFloatValue(rio *rdb, float *val) {
     return 0;
 }
 
+/**
+ * 保存robj的类型
+ */ 
 /* Save the object type of object "o". */
 int rdbSaveObjectType(rio *rdb, robj *o) {
     switch (o->type) {
@@ -749,6 +755,9 @@ size_t rdbSaveStreamConsumers(rio *rdb, streamCG *cg) {
     return nwritten;
 }
 
+/**
+ * 保存redis object对象
+ */ 
 /* Save a Redis object.
  * Returns -1 on error, number of bytes written on success. */
 ssize_t rdbSaveObject(rio *rdb, robj *o) {
