@@ -1,0 +1,135 @@
+2019/05/06 19:51:51 [WARN] 
+______________________________
+\                             \           _         ______ |
+ \                             \        /   \___-=O'/|O'/__|
+  \  redis-shake, here we go !! \_______\          / | /    )
+  /                             /        '/-==__ _/__|/__=-|  -GM
+ /                             /         *             \ | |
+/                             /                        (o)
+------------------------------
+if you have any problem, please visit https://github.com/alibaba/RedisShake/wiki/FAQ
+
+2019/05/06 19:52:35 [WARN] 
+______________________________
+\                             \           _         ______ |
+ \                             \        /   \___-=O'/|O'/__|
+  \  redis-shake, here we go !! \_______\          / | /    )
+  /                             /        '/-==__ _/__|/__=-|  -GM
+ /                             /         *             \ | |
+/                             /                        (o)
+------------------------------
+if you have any problem, please visit https://github.com/alibaba/RedisShake/wiki/FAQ
+
+2019/05/06 19:52:35 [INFO] redis-shake configuration: {"Id":"redis-shake-dump","LogFile":"/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/redis-shake-dump.log","LogLevel":"info","SystemProfile":20882,"HttpProfile":20881,"NCpu":0,"Parallel":32,"InputRdb":"/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/local.rdb","OutputRdb":"/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/redis-shake-dump.rdb","SourceAddress":"127.0.0.1:6380","SourcePasswordRaw":"","SourcePasswordEncoding":"","SourceVersion":0,"SourceAuthType":"","TargetAddress":"127.0.0.1:6383","TargetPasswordRaw":"","TargetPasswordEncoding":"","TargetVersion":0,"TargetDB":-1,"TargetAuthType":"","FakeTime":"","Rewrite":true,"FilterDB":"","FilterKey":[],"FilterSlot":[],"BigKeyThreshold":524288000,"Psync":false,"Metric":true,"MetricPrintLog":false,"HeartbeatUrl":"","HeartbeatInterval":3,"HeartbeatExternal":"test external","HeartbeatNetworkInterface":"","SenderSize":104857600,"SenderCount":5000,"SenderDelayChannelSize":65535,"KeepAlive":0,"PidPath":"/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/","ScanKeyNumber":50,"ScanSpecialCloud":"","ScanKeyFile":"","ReplaceHashTag":false,"ExtraInfo":true,"SockFileName":"","SockFileSize":0,"HeartbeatIp":"127.0.0.1","ShiftTime":0,"TargetRedisVersion":"","TargetReplace":false}
+2019/05/06 19:52:35 [INFO] dump from '127.0.0.1:6380' to '/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/redis-shake-dump.rdb'
+2019/05/06 19:52:35 [INFO] try to auth address[127.0.0.1:6380] with type[]
+2019/05/06 19:52:35 [INFO] input password is empty, skip auth address[127.0.0.1:6380] with type[].
+2019/05/06 19:52:35 [INFO] auth OK!
+2019/05/06 19:52:35 [INFO] rdb file = 279
+2019/05/06 19:52:35 [INFO] total = 279 -          279 [100%]
+2019/05/06 19:52:35 [INFO] dump: rdb done
+2019/05/06 19:52:36 [INFO] dump: total = 412
+2019/05/06 19:52:37 [INFO] dump: total = 412
+2019/05/06 19:52:38 [INFO] dump: total = 545
+2019/05/06 19:52:39 [INFO] dump: total = 559
+2019/05/06 19:52:40 [INFO] dump: total = 692
+2019/05/06 19:52:41 [INFO] dump: total = 692
+2019/05/06 19:52:42 [INFO] dump: total = 825
+2019/05/06 19:52:43 [INFO] dump: total = 825
+2019/05/06 19:52:44 [INFO] dump: total = 825
+2019/05/06 19:52:45 [INFO] dump: total = 958
+2019/05/06 19:52:46 [INFO] dump: total = 958
+2019/05/06 19:52:47 [INFO] dump: total = 1091
+2019/05/06 19:52:48 [INFO] dump: total = 1091
+2019/05/06 19:52:49 [INFO] dump: total = 1238
+2019/05/06 19:52:50 [INFO] dump: total = 1238
+2019/05/06 19:52:51 [INFO] dump: total = 1371
+2019/05/06 19:52:52 [INFO] dump: total = 1371
+2019/05/06 19:52:53 [INFO] dump: total = 1504
+2019/05/06 19:52:54 [INFO] dump: total = 1504
+2019/05/06 19:52:55 [INFO] dump: total = 1637
+2019/05/06 19:52:56 [INFO] dump: total = 1637
+2019/05/06 19:52:57 [INFO] dump: total = 1770
+2019/05/06 19:52:58 [INFO] dump: total = 1770
+2019/05/06 19:52:59 [INFO] dump: total = 1917
+2019/05/06 19:53:00 [INFO] dump: total = 1917
+2019/05/06 19:53:01 [INFO] dump: total = 2050
+2019/05/06 19:53:02 [INFO] dump: total = 2050
+2019/05/06 19:53:03 [INFO] dump: total = 2183
+2019/05/06 19:53:04 [INFO] dump: total = 2183
+2019/05/06 19:53:05 [INFO] dump: total = 2316
+2019/05/06 19:53:06 [INFO] dump: total = 2316
+2019/05/06 19:53:07 [INFO] dump: total = 2449
+2019/05/06 19:53:08 [INFO] dump: total = 2449
+2019/05/06 19:53:09 [INFO] dump: total = 2596
+2019/05/06 19:53:10 [INFO] dump: total = 2596
+2019/05/06 19:53:11 [INFO] dump: total = 2729
+2019/05/06 19:53:12 [INFO] dump: total = 2729
+2019/05/06 19:53:13 [INFO] dump: total = 2862
+2019/05/06 19:53:14 [INFO] dump: total = 2862
+2019/05/06 19:53:15 [INFO] dump: total = 2995
+2019/05/06 19:53:16 [INFO] dump: total = 2995
+2019/05/06 19:53:17 [INFO] dump: total = 3128
+2019/05/06 19:53:18 [INFO] dump: total = 3128
+2019/05/06 19:53:19 [INFO] dump: total = 3275
+2019/05/06 19:53:20 [INFO] dump: total = 3275
+2019/05/06 19:53:21 [INFO] dump: total = 3408
+2019/05/06 19:53:22 [INFO] dump: total = 3408
+2019/05/06 19:53:23 [INFO] dump: total = 3541
+2019/05/06 19:53:24 [INFO] dump: total = 3541
+2019/05/06 19:53:25 [INFO] dump: total = 3674
+2019/05/06 19:53:26 [INFO] dump: total = 3674
+2019/05/06 19:53:27 [INFO] dump: total = 3807
+2019/05/06 19:53:28 [INFO] dump: total = 3807
+2019/05/06 19:53:29 [INFO] dump: total = 3940
+2019/05/06 19:53:30 [INFO] dump: total = 3954
+2019/05/06 19:53:31 [INFO] dump: total = 4087
+2019/05/06 19:53:32 [INFO] dump: total = 4087
+2019/05/06 19:53:33 [INFO] dump: total = 4220
+2019/05/06 19:53:34 [INFO] dump: total = 4220
+2019/05/06 19:53:35 [INFO] dump: total = 4353
+2019/05/06 19:53:36 [INFO] dump: total = 4353
+2019/05/06 19:53:37 [INFO] dump: total = 4486
+2019/05/06 19:53:38 [INFO] dump: total = 4486
+2019/05/06 19:53:39 [INFO] dump: total = 4486
+2019/05/06 19:53:40 [INFO] dump: total = 4633
+2019/05/06 19:53:41 [INFO] dump: total = 4633
+2019/05/06 19:53:42 [INFO] dump: total = 4766
+2019/05/06 19:53:43 [INFO] dump: total = 4766
+2019/05/06 19:53:44 [INFO] dump: total = 4899
+2019/05/06 19:53:45 [INFO] dump: total = 4899
+2019/05/06 19:53:46 [INFO] dump: total = 5032
+2019/05/06 19:53:47 [INFO] dump: total = 5032
+2019/05/06 19:53:48 [INFO] dump: total = 5165
+2019/05/06 19:53:49 [INFO] dump: total = 5165
+2019/05/06 19:53:50 [INFO] dump: total = 5312
+2019/05/06 19:53:51 [INFO] dump: total = 5312
+2019/05/06 19:53:52 [INFO] dump: total = 5445
+2019/05/06 19:53:53 [INFO] dump: total = 5445
+2019/05/06 19:53:54 [INFO] dump: total = 5578
+2019/05/06 19:53:55 [INFO] dump: total = 5578
+2019/05/06 19:53:56 [INFO] dump: total = 5711
+2019/05/06 19:53:57 [INFO] dump: total = 5711
+2019/05/06 19:53:58 [INFO] dump: total = 5844
+2019/05/06 19:53:59 [INFO] dump: total = 5844
+2019/05/06 19:54:00 [INFO] dump: total = 5991
+2019/05/06 19:54:01 [INFO] dump: total = 5991
+2019/05/06 19:54:02 [INFO] dump: total = 6124
+2019/05/06 19:54:03 [INFO] dump: total = 6124
+2019/05/06 19:54:04 [INFO] dump: total = 6257
+2019/05/06 19:54:05 [INFO] dump: total = 6257
+2019/05/06 19:54:06 [INFO] dump: total = 6390
+2019/05/06 19:54:07 [INFO] dump: total = 6390
+2019/05/06 19:54:08 [INFO] dump: total = 6523
+2019/05/06 19:54:09 [INFO] dump: total = 6523
+2019/05/06 19:54:10 [INFO] dump: total = 6670
+2019/05/06 19:54:11 [INFO] dump: total = 6670
+2019/05/06 19:54:12 [INFO] dump: total = 6803
+2019/05/06 19:54:13 [INFO] dump: total = 6803
+2019/05/06 19:54:14 [INFO] dump: total = 6936
+2019/05/06 19:54:15 [INFO] dump: total = 6936
+2019/05/06 19:54:16 [INFO] dump: total = 7069
+2019/05/06 19:54:17 [INFO] dump: total = 7069
+2019/05/06 19:54:18 [INFO] dump: total = 7202
+2019/05/06 19:54:19 [INFO] dump: total = 7202
+2019/05/06 19:54:20 [INFO] receive signal: interrupt

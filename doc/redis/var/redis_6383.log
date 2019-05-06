@@ -1,0 +1,662 @@
+16679:C 06 May 2019 19:22:30.392 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+16679:C 06 May 2019 19:22:30.393 # Redis version=5.0.2, bits=64, commit=00000000, modified=0, pid=16679, just started
+16679:C 06 May 2019 19:22:30.393 # Configuration loaded
+16680:M 06 May 2019 19:22:30.396 * Increased maximum number of open files to 10032 (it was originally set to 256).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 5.0.2 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6383
+ |    `-._   `._    /     _.-'    |     PID: 16680
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+16680:M 06 May 2019 19:22:30.398 # Server initialized
+16680:M 06 May 2019 19:22:30.398 * Ready to accept connections
+16680:M 06 May 2019 19:22:30.398 * The server is now ready to accept connections at /Users/hailanzhou/hylaz/redis/doc/redis/var/redis_6383.sock
+16680:M 06 May 2019 19:22:30.398 - 0 clients connected (0 replicas), 987232 bytes in use
+16680:M 06 May 2019 19:22:35.452 - 0 clients connected (0 replicas), 987232 bytes in use
+16680:M 06 May 2019 19:22:39.894 - Accepted 127.0.0.1:53530
+16680:M 06 May 2019 19:22:40.504 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:22:45.552 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:22:47.963 - Client closed connection
+16680:M 06 May 2019 19:22:50.595 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:22:55.648 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:00.692 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:05.730 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:10.777 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:15.821 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:20.864 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:25.917 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:30.962 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:36.013 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:41.066 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:46.119 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:51.171 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:23:56.218 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:01.265 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:06.322 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:11.371 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:16.423 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:21.470 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:26.523 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:31.570 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:36.613 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:41.666 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:46.717 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:51.763 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:24:56.810 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:01.855 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:06.898 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:11.956 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:17.011 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:22.057 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:27.095 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:32.137 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:37.186 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:42.242 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:47.293 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:52.345 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:25:57.399 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:02.445 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:07.497 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:12.543 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:17.593 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:22.634 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:27.680 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:32.723 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:37.765 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:42.804 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:47.853 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:52.900 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:26:57.951 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:03.005 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:08.055 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:13.107 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:18.159 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:23.205 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:28.257 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:33.306 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:38.359 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:43.409 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:48.459 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:53.512 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:27:58.559 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:03.614 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:08.662 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:13.720 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:18.780 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:23.826 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:28.875 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:33.916 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:38.965 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:44.022 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:49.076 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:54.138 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:28:59.196 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:04.246 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:09.304 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:14.361 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:19.424 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:24.484 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:29.540 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:34.597 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:39.651 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:44.705 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:49.757 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:54.804 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:29:59.859 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:04.910 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:09.964 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:15.019 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:20.072 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:25.126 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:30.187 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:35.242 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:40.298 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:45.357 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:50.412 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:30:55.462 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:00.510 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:05.558 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:10.599 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:15.641 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:20.698 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:25.757 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:30.824 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:35.879 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:40.941 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:45.994 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:51.050 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:31:56.100 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:01.164 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:06.215 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:11.258 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:16.313 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:21.366 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:26.410 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:31.460 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:36.508 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:41.568 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:46.620 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:51.669 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:32:56.719 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:01.771 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:06.826 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:11.874 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:16.930 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:21.973 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:27.024 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:32.085 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:37.148 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:42.223 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:47.289 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:52.345 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:33:57.403 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:02.440 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:07.493 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:12.558 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:17.606 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:22.660 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:27.721 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:32.775 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:37.812 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:42.865 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:47.920 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:52.965 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:34:58.018 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:03.068 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:08.119 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:13.182 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:18.228 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:23.285 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:28.337 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:33.393 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:38.445 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:43.504 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:48.550 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:53.606 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:35:58.656 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:03.709 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:08.756 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:13.819 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:18.866 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:23.923 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:28.976 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:34.029 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:39.081 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:44.134 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:49.191 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:54.260 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:36:59.313 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:04.377 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:09.430 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:14.477 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:19.533 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:24.603 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:29.664 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:34.724 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:39.779 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:44.831 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:49.874 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:54.934 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:37:59.990 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:05.040 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:10.101 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:15.155 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:20.218 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:25.287 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:30.342 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:35.398 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:40.463 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:45.517 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:50.574 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:38:51.872 - Accepted 127.0.0.1:54804
+16680:M 06 May 2019 19:38:55.633 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:39:00.692 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:39:05.751 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:39:10.806 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:39:15.866 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:39:20.928 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:39:25.983 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:39:30.205 - Client closed connection
+16680:M 06 May 2019 19:39:31.039 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:39:36.102 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:39:41.150 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:39:46.208 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:39:51.272 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:39:56.343 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:40:01.397 - 0 clients connected (0 replicas), 987248 bytes in use
+16680:M 06 May 2019 19:40:02.819 - Accepted 127.0.0.1:54892
+16680:M 06 May 2019 19:40:06.461 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:40:11.520 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:40:16.570 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:40:21.628 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:40:26.670 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:40:31.722 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:40:36.772 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:40:41.834 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:40:46.890 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:40:51.939 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:40:56.990 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:02.038 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:07.105 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:12.160 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:17.215 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:22.275 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:27.332 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:32.384 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:37.435 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:42.487 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:47.539 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:52.593 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:41:57.646 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:02.710 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:07.771 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:12.833 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:17.890 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:22.943 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:27.989 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:33.046 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:38.099 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:43.154 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:48.199 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:53.243 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:42:58.291 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:43:03.344 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:43:08.402 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:43:13.455 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:43:18.508 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:43:23.546 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:43:28.594 - 1 clients connected (0 replicas), 1005088 bytes in use
+16680:M 06 May 2019 19:43:32.581 - Accepted 127.0.0.1:55155
+16680:M 06 May 2019 19:43:32.589 - Client closed connection
+16680:M 06 May 2019 19:43:32.589 - Accepted 127.0.0.1:55156
+16680:M 06 May 2019 19:43:32.590 - Accepted 127.0.0.1:55157
+16680:M 06 May 2019 19:43:32.591 - Accepted 127.0.0.1:55158
+16680:M 06 May 2019 19:43:32.591 - Accepted 127.0.0.1:55159
+16680:M 06 May 2019 19:43:32.591 - Accepted 127.0.0.1:55160
+16680:M 06 May 2019 19:43:32.591 - Accepted 127.0.0.1:55161
+16680:M 06 May 2019 19:43:32.591 - Accepted 127.0.0.1:55162
+16680:M 06 May 2019 19:43:32.591 - Accepted 127.0.0.1:55163
+16680:M 06 May 2019 19:43:32.592 - Accepted 127.0.0.1:55164
+16680:M 06 May 2019 19:43:32.592 - Accepted 127.0.0.1:55165
+16680:M 06 May 2019 19:43:32.592 - Accepted 127.0.0.1:55166
+16680:M 06 May 2019 19:43:32.592 - Accepted 127.0.0.1:55167
+16680:M 06 May 2019 19:43:32.592 - Accepted 127.0.0.1:55168
+16680:M 06 May 2019 19:43:32.593 - Accepted 127.0.0.1:55169
+16680:M 06 May 2019 19:43:32.593 - Accepted 127.0.0.1:55170
+16680:M 06 May 2019 19:43:32.593 - Accepted 127.0.0.1:55171
+16680:M 06 May 2019 19:43:32.593 - Accepted 127.0.0.1:55172
+16680:M 06 May 2019 19:43:32.593 - Accepted 127.0.0.1:55173
+16680:M 06 May 2019 19:43:32.594 - Accepted 127.0.0.1:55174
+16680:M 06 May 2019 19:43:32.594 - Accepted 127.0.0.1:55175
+16680:M 06 May 2019 19:43:32.594 - Accepted 127.0.0.1:55176
+16680:M 06 May 2019 19:43:32.594 - Accepted 127.0.0.1:55177
+16680:M 06 May 2019 19:43:32.594 - Accepted 127.0.0.1:55178
+16680:M 06 May 2019 19:43:32.594 - Accepted 127.0.0.1:55179
+16680:M 06 May 2019 19:43:32.595 - Accepted 127.0.0.1:55180
+16680:M 06 May 2019 19:43:32.595 - Accepted 127.0.0.1:55181
+16680:M 06 May 2019 19:43:32.595 - Accepted 127.0.0.1:55182
+16680:M 06 May 2019 19:43:32.595 - Accepted 127.0.0.1:55183
+16680:M 06 May 2019 19:43:32.595 - Accepted 127.0.0.1:55184
+16680:M 06 May 2019 19:43:32.595 - Accepted 127.0.0.1:55185
+16680:M 06 May 2019 19:43:32.596 - Accepted 127.0.0.1:55186
+16680:M 06 May 2019 19:43:32.596 - Accepted 127.0.0.1:55187
+16680:M 06 May 2019 19:43:32.596 - Client closed connection
+16680:M 06 May 2019 19:43:32.596 - Client closed connection
+16680:M 06 May 2019 19:43:32.596 - Client closed connection
+16680:M 06 May 2019 19:43:32.597 - Client closed connection
+16680:M 06 May 2019 19:43:32.597 - Client closed connection
+16680:M 06 May 2019 19:43:32.597 - Client closed connection
+16680:M 06 May 2019 19:43:32.597 - Client closed connection
+16680:M 06 May 2019 19:43:32.597 - Client closed connection
+16680:M 06 May 2019 19:43:32.598 - Client closed connection
+16680:M 06 May 2019 19:43:32.598 - Client closed connection
+16680:M 06 May 2019 19:43:32.598 - Client closed connection
+16680:M 06 May 2019 19:43:32.598 - Client closed connection
+16680:M 06 May 2019 19:43:32.598 - Client closed connection
+16680:M 06 May 2019 19:43:32.598 - Client closed connection
+16680:M 06 May 2019 19:43:32.599 - Client closed connection
+16680:M 06 May 2019 19:43:32.599 - Client closed connection
+16680:M 06 May 2019 19:43:32.599 - Client closed connection
+16680:M 06 May 2019 19:43:32.599 - Client closed connection
+16680:M 06 May 2019 19:43:32.599 - Client closed connection
+16680:M 06 May 2019 19:43:32.599 - Client closed connection
+16680:M 06 May 2019 19:43:32.600 - Client closed connection
+16680:M 06 May 2019 19:43:32.600 - Client closed connection
+16680:M 06 May 2019 19:43:32.600 - Client closed connection
+16680:M 06 May 2019 19:43:32.600 - Client closed connection
+16680:M 06 May 2019 19:43:32.600 - Client closed connection
+16680:M 06 May 2019 19:43:32.600 - Client closed connection
+16680:M 06 May 2019 19:43:32.600 - Client closed connection
+16680:M 06 May 2019 19:43:32.601 - Client closed connection
+16680:M 06 May 2019 19:43:32.601 - Client closed connection
+16680:M 06 May 2019 19:43:32.601 - Client closed connection
+16680:M 06 May 2019 19:43:32.601 - Client closed connection
+16680:M 06 May 2019 19:43:32.601 - Client closed connection
+16680:M 06 May 2019 19:43:32.638 * 1 changes in 900 seconds. Saving...
+16680:M 06 May 2019 19:43:32.639 * Background saving started by pid 18334
+18334:C 06 May 2019 19:43:32.640 * DB saved on disk
+16680:M 06 May 2019 19:43:32.741 * Background saving terminated with success
+16680:M 06 May 2019 19:43:33.654 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:43:33.655 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:43:38.721 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:43:38.722 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:43:43.784 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:43:43.785 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:43:48.841 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:43:48.841 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:43:53.901 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:43:53.902 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:43:58.946 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:43:58.947 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:44:03.996 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:44:03.997 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:44:09.056 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:44:09.057 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:44:14.118 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:44:14.119 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:44:19.174 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:44:19.175 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:44:24.236 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:44:24.237 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:44:29.304 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:44:29.305 - 1 clients connected (0 replicas), 1005952 bytes in use
+16680:M 06 May 2019 19:44:32.462 * DB saved on disk
+16680:M 06 May 2019 19:44:34.371 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:44:39.433 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:44:44.480 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:44:49.539 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:44:54.605 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:44:59.660 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:04.725 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:09.783 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:14.845 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:19.906 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:24.971 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:30.015 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:35.062 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:40.108 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:45.154 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:50.207 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:45:55.257 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:46:00.310 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:46:05.358 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:46:10.421 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:46:15.474 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:46:20.534 - 1 clients connected (0 replicas), 1005488 bytes in use
+16680:M 06 May 2019 19:46:21.699 - Accepted 127.0.0.1:55392
+16680:M 06 May 2019 19:46:21.708 - Client closed connection
+16680:M 06 May 2019 19:46:21.765 - Accepted 127.0.0.1:55394
+16680:M 06 May 2019 19:46:21.765 - Accepted 127.0.0.1:55395
+16680:M 06 May 2019 19:46:21.766 - Accepted 127.0.0.1:55396
+16680:M 06 May 2019 19:46:21.766 - Accepted 127.0.0.1:55397
+16680:M 06 May 2019 19:46:21.766 - Accepted 127.0.0.1:55398
+16680:M 06 May 2019 19:46:21.767 - Accepted 127.0.0.1:55399
+16680:M 06 May 2019 19:46:21.767 - Accepted 127.0.0.1:55400
+16680:M 06 May 2019 19:46:21.767 - Accepted 127.0.0.1:55401
+16680:M 06 May 2019 19:46:21.767 - Accepted 127.0.0.1:55402
+16680:M 06 May 2019 19:46:21.768 - Accepted 127.0.0.1:55403
+16680:M 06 May 2019 19:46:21.768 - Accepted 127.0.0.1:55404
+16680:M 06 May 2019 19:46:21.768 - Accepted 127.0.0.1:55405
+16680:M 06 May 2019 19:46:21.769 - Accepted 127.0.0.1:55406
+16680:M 06 May 2019 19:46:21.769 - Accepted 127.0.0.1:55407
+16680:M 06 May 2019 19:46:21.769 - Accepted 127.0.0.1:55408
+16680:M 06 May 2019 19:46:21.769 - Accepted 127.0.0.1:55409
+16680:M 06 May 2019 19:46:21.769 - Accepted 127.0.0.1:55410
+16680:M 06 May 2019 19:46:21.770 - Accepted 127.0.0.1:55411
+16680:M 06 May 2019 19:46:21.770 - Accepted 127.0.0.1:55412
+16680:M 06 May 2019 19:46:21.770 - Accepted 127.0.0.1:55413
+16680:M 06 May 2019 19:46:21.770 - Accepted 127.0.0.1:55414
+16680:M 06 May 2019 19:46:21.770 - Accepted 127.0.0.1:55415
+16680:M 06 May 2019 19:46:21.770 - Accepted 127.0.0.1:55416
+16680:M 06 May 2019 19:46:21.771 - Accepted 127.0.0.1:55417
+16680:M 06 May 2019 19:46:21.771 - Accepted 127.0.0.1:55418
+16680:M 06 May 2019 19:46:21.771 - Accepted 127.0.0.1:55419
+16680:M 06 May 2019 19:46:21.771 - Accepted 127.0.0.1:55420
+16680:M 06 May 2019 19:46:21.771 - Accepted 127.0.0.1:55421
+16680:M 06 May 2019 19:46:21.771 - Accepted 127.0.0.1:55422
+16680:M 06 May 2019 19:46:21.772 - Accepted 127.0.0.1:55423
+16680:M 06 May 2019 19:46:21.772 - Accepted 127.0.0.1:55424
+16680:M 06 May 2019 19:46:21.772 - Accepted 127.0.0.1:55425
+16680:M 06 May 2019 19:46:21.772 - Client closed connection
+16680:M 06 May 2019 19:46:21.772 - Client closed connection
+16680:M 06 May 2019 19:46:21.772 - Client closed connection
+16680:M 06 May 2019 19:46:21.773 - Client closed connection
+16680:M 06 May 2019 19:46:21.773 - Client closed connection
+16680:M 06 May 2019 19:46:21.773 - Client closed connection
+16680:M 06 May 2019 19:46:21.773 - Client closed connection
+16680:M 06 May 2019 19:46:21.773 - Client closed connection
+16680:M 06 May 2019 19:46:21.773 - Client closed connection
+16680:M 06 May 2019 19:46:21.774 - Client closed connection
+16680:M 06 May 2019 19:46:21.774 - Client closed connection
+16680:M 06 May 2019 19:46:21.774 - Client closed connection
+16680:M 06 May 2019 19:46:21.774 - Client closed connection
+16680:M 06 May 2019 19:46:21.774 - Client closed connection
+16680:M 06 May 2019 19:46:21.775 - Client closed connection
+16680:M 06 May 2019 19:46:21.775 - Client closed connection
+16680:M 06 May 2019 19:46:21.775 - Client closed connection
+16680:M 06 May 2019 19:46:21.775 - Client closed connection
+16680:M 06 May 2019 19:46:21.775 - Client closed connection
+16680:M 06 May 2019 19:46:21.775 - Client closed connection
+16680:M 06 May 2019 19:46:21.776 - Client closed connection
+16680:M 06 May 2019 19:46:21.776 - Client closed connection
+16680:M 06 May 2019 19:46:21.776 - Client closed connection
+16680:M 06 May 2019 19:46:21.776 - Client closed connection
+16680:M 06 May 2019 19:46:21.776 - Client closed connection
+16680:M 06 May 2019 19:46:21.776 - Client closed connection
+16680:M 06 May 2019 19:46:21.777 - Client closed connection
+16680:M 06 May 2019 19:46:21.777 - Client closed connection
+16680:M 06 May 2019 19:46:21.777 - Client closed connection
+16680:M 06 May 2019 19:46:21.777 - Client closed connection
+16680:M 06 May 2019 19:46:21.777 - Client closed connection
+16680:M 06 May 2019 19:46:21.778 - Client closed connection
+16680:M 06 May 2019 19:46:21.778 - Accepted 127.0.0.1:55426
+16680:M 06 May 2019 19:46:25.592 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:46:25.593 - 2 clients connected (0 replicas), 1023840 bytes in use
+16680:M 06 May 2019 19:46:30.663 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:46:30.664 - 2 clients connected (0 replicas), 1023840 bytes in use
+16680:M 06 May 2019 19:46:35.727 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:46:35.728 - 2 clients connected (0 replicas), 1023840 bytes in use
+16680:M 06 May 2019 19:46:40.790 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:46:40.791 - 2 clients connected (0 replicas), 1023840 bytes in use
+16680:M 06 May 2019 19:46:45.862 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:46:45.863 - 2 clients connected (0 replicas), 1057104 bytes in use
+16680:M 06 May 2019 19:46:50.937 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:46:50.938 - 2 clients connected (0 replicas), 1023840 bytes in use
+16680:M 06 May 2019 19:46:56.004 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:46:56.004 - 2 clients connected (0 replicas), 1057136 bytes in use
+16680:M 06 May 2019 19:47:01.078 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:01.078 - 2 clients connected (0 replicas), 1023840 bytes in use
+16680:M 06 May 2019 19:47:06.147 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:06.147 - 2 clients connected (0 replicas), 1057104 bytes in use
+16680:M 06 May 2019 19:47:11.215 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:11.216 - 2 clients connected (0 replicas), 1023840 bytes in use
+16680:M 06 May 2019 19:47:16.280 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:16.280 - 2 clients connected (0 replicas), 1023824 bytes in use
+16680:M 06 May 2019 19:47:21.338 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:21.339 - 2 clients connected (0 replicas), 1023920 bytes in use
+16680:M 06 May 2019 19:47:26.417 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:26.418 - 2 clients connected (0 replicas), 1023904 bytes in use
+16680:M 06 May 2019 19:47:31.483 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:31.483 - 2 clients connected (0 replicas), 1023920 bytes in use
+16680:M 06 May 2019 19:47:36.552 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:36.558 - 2 clients connected (0 replicas), 1023904 bytes in use
+16680:M 06 May 2019 19:47:41.627 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:41.628 - 2 clients connected (0 replicas), 1023920 bytes in use
+16680:M 06 May 2019 19:47:46.702 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:46.703 - 2 clients connected (0 replicas), 1023904 bytes in use
+16680:M 06 May 2019 19:47:51.779 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:51.780 - 2 clients connected (0 replicas), 1023920 bytes in use
+16680:M 06 May 2019 19:47:56.851 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:47:56.852 - 2 clients connected (0 replicas), 1023904 bytes in use
+16680:M 06 May 2019 19:48:01.924 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:01.924 - 2 clients connected (0 replicas), 1023920 bytes in use
+16680:M 06 May 2019 19:48:07.001 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:07.001 - 2 clients connected (0 replicas), 1023904 bytes in use
+16680:M 06 May 2019 19:48:12.069 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:12.070 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:48:17.133 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:17.134 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:48:22.207 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:22.208 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:48:27.280 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:27.281 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:48:32.341 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:32.342 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:48:37.407 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:37.407 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:48:42.471 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:42.471 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:48:47.528 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:47.529 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:48:52.585 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:52.586 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:48:57.646 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:48:57.647 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:49:02.702 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:02.703 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:49:07.753 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:07.753 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:49:12.812 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:12.813 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:49:17.871 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:17.872 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:49:22.927 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:22.928 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:49:27.986 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:27.987 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:49:33.038 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:33.039 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:49:33.044 * 10 changes in 300 seconds. Saving...
+16680:M 06 May 2019 19:49:33.046 * Background saving started by pid 18677
+18677:C 06 May 2019 19:49:33.047 * DB saved on disk
+16680:M 06 May 2019 19:49:33.148 * Background saving terminated with success
+16680:M 06 May 2019 19:49:38.103 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:38.103 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:49:43.171 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:43.172 - 2 clients connected (0 replicas), 1057264 bytes in use
+16680:M 06 May 2019 19:49:48.240 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:48.240 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:49:53.299 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:53.299 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:49:58.361 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:49:58.362 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:03.416 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:03.416 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:08.464 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:08.465 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:13.536 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:13.537 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:18.602 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:18.602 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:23.662 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:23.662 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:28.731 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:28.731 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:33.795 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:33.796 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:38.860 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:38.860 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:43.926 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:43.927 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:48.984 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:48.984 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:54.052 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:54.053 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:50:59.116 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:50:59.126 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:04.172 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:04.173 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:09.226 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:09.227 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:14.275 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:14.276 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:19.329 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:19.330 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:24.376 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:24.376 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:29.440 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:29.441 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:34.495 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:34.495 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:39.561 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:39.561 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:44.634 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:44.635 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:49.708 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:49.709 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:54.772 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:54.773 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:51:59.830 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:51:59.831 - 2 clients connected (0 replicas), 1057264 bytes in use
+16680:M 06 May 2019 19:52:04.891 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:04.892 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:52:09.951 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:09.951 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:52:15.020 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:15.021 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:52:20.081 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:20.082 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:52:25.140 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:25.141 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:52:30.206 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:30.206 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:52:35.266 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:35.267 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:52:40.322 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:40.322 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:52:45.385 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:45.385 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:52:50.451 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:50.452 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:52:55.513 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:52:55.513 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:53:00.583 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:00.583 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:53:05.654 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:05.654 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:53:10.720 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:10.721 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:53:15.784 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:15.785 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:53:20.851 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:20.852 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:53:25.927 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:25.927 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:53:30.993 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:30.994 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:53:36.068 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:36.068 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:53:41.135 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:41.135 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:53:46.202 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:46.202 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:53:51.263 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:51.264 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:53:56.331 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:53:56.332 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:54:01.394 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:54:01.395 - 2 clients connected (0 replicas), 1023984 bytes in use
+16680:M 06 May 2019 19:54:06.451 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:54:06.452 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:54:11.506 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:54:11.507 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:54:16.569 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:54:16.570 - 2 clients connected (0 replicas), 1057264 bytes in use
+16680:M 06 May 2019 19:54:21.627 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:54:21.627 - 2 clients connected (0 replicas), 1024000 bytes in use
+16680:M 06 May 2019 19:54:26.686 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:54:26.686 - 2 clients connected (0 replicas), 1057264 bytes in use
+16680:M 06 May 2019 19:54:31.749 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16680:M 06 May 2019 19:54:31.750 - 2 clients connected (0 replicas), 1024000 bytes in use

@@ -1,0 +1,31 @@
+15845:X 06 May 2019 19:10:23.058 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+15845:X 06 May 2019 19:10:23.058 # Redis version=5.0.2, bits=64, commit=00000000, modified=0, pid=15845, just started
+15845:X 06 May 2019 19:10:23.059 # Configuration loaded
+15846:X 06 May 2019 19:10:23.062 * Increased maximum number of open files to 10032 (it was originally set to 256).
+15846:X 06 May 2019 19:10:23.064 * Running mode=sentinel, port=26380.
+15846:X 06 May 2019 19:10:23.066 # Sentinel ID is 55d859df22a9fb47578dd92f1aa1cc0094fc3cc9
+15846:X 06 May 2019 19:10:23.067 # +monitor master mymaster 127.0.0.1 6380 quorum 1
+15846:X 06 May 2019 19:10:23.068 * +slave slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:10:23.069 * +slave slave 127.0.0.1:6382 127.0.0.1 6382 @ mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:25.379 # +sdown master mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:25.379 # +odown master mymaster 127.0.0.1 6380 #quorum 1/1
+15846:X 06 May 2019 19:12:25.381 # +new-epoch 1
+15846:X 06 May 2019 19:12:25.382 # +try-failover master mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:25.383 # +vote-for-leader 55d859df22a9fb47578dd92f1aa1cc0094fc3cc9 1
+15846:X 06 May 2019 19:12:25.383 # +elected-leader master mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:25.383 # +failover-state-select-slave master mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:25.461 # +selected-slave slave 127.0.0.1:6382 127.0.0.1 6382 @ mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:25.462 * +failover-state-send-slaveof-noone slave 127.0.0.1:6382 127.0.0.1 6382 @ mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:25.518 * +failover-state-wait-promotion slave 127.0.0.1:6382 127.0.0.1 6382 @ mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:26.553 # +promoted-slave slave 127.0.0.1:6382 127.0.0.1 6382 @ mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:26.553 # +failover-state-reconf-slaves master mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:26.606 * +slave-reconf-sent slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:27.572 * +slave-reconf-inprog slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:27.573 * +slave-reconf-done slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:27.674 # +failover-end master mymaster 127.0.0.1 6380
+15846:X 06 May 2019 19:12:27.674 # +switch-master mymaster 127.0.0.1 6380 127.0.0.1 6382
+15846:X 06 May 2019 19:12:27.677 * +slave slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6382
+15846:X 06 May 2019 19:12:27.678 * +slave slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6382
+15846:X 06 May 2019 19:12:57.717 # +sdown slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6382
+15846:X 06 May 2019 19:14:11.361 # -sdown slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6382
+15846:X 06 May 2019 19:14:21.329 * +convert-to-slave slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6382

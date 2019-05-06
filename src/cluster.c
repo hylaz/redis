@@ -355,7 +355,9 @@ err:
     sdsfree(ci);
     return -1;
 }
-
+/**
+ * 保存集群的配置
+ */ 
 void clusterSaveConfigOrDie(int do_fsync) {
     if (clusterSaveConfig(do_fsync) == -1) {
         serverLog(LL_WARNING,"Fatal: can't update cluster config file.");
@@ -414,6 +416,9 @@ int clusterLockConfig(char *filename) {
  * in the "myself" node based on the current configuration of the node,
  * that may change at runtime via CONFIG SET. This function changes the
  * set of flags in myself->flags accordingly. */
+/**
+ * 更新集群flags的值
+ */ 
 void clusterUpdateMyselfFlags(void) {
     int oldflags = myself->flags;
     int nofailover = server.cluster_slave_no_failover ?
@@ -902,6 +907,7 @@ int clusterAddNode(clusterNode *node) {
  *    from the hash table and from the list of slaves of its master, if
  *    it is a slave node.
  */
+
 void clusterDelNode(clusterNode *delnode) {
     int j;
     dictIterator *di;
@@ -3298,6 +3304,9 @@ void clusterHandleManualFailover(void) {
  * -------------------------------------------------------------------------- */
 
 /* This is executed 10 times every second */
+/**
+ * 集群周期计划cron
+*/
 void clusterCron(void) {
     dictIterator *di;
     dictEntry *de;
@@ -3319,7 +3328,7 @@ void clusterCron(void) {
         static char *prev_ip = NULL;
         char *curr_ip = server.cluster_announce_ip;
         int changed = 0;
-
+        /* 集群的announce_ip是否改变 */
         if (prev_ip == NULL && curr_ip != NULL) changed = 1;
         else if (prev_ip != NULL && curr_ip == NULL) changed = 1;
         else if (prev_ip && curr_ip && strcmp(prev_ip,curr_ip)) changed = 1;
@@ -3349,6 +3358,7 @@ void clusterCron(void) {
     if (handshake_timeout < 1000) handshake_timeout = 1000;
 
     /* Update myself flags. */
+    /* 更新自己节点的flags */
     clusterUpdateMyselfFlags();
 
     /* Check if we have disconnected nodes and re-establish the connection.
@@ -3589,10 +3599,12 @@ void clusterBeforeSleep(void) {
         clusterHandleSlaveFailover();
 
     /* Update the cluster state. */
+    /* 更新集群状态 */
     if (server.cluster->todo_before_sleep & CLUSTER_TODO_UPDATE_STATE)
         clusterUpdateState();
 
     /* Save the config, possibly using fsync. */
+    /* 同步保存配置 */
     if (server.cluster->todo_before_sleep & CLUSTER_TODO_SAVE_CONFIG) {
         int fsync = server.cluster->todo_before_sleep &
                     CLUSTER_TODO_FSYNC_CONFIG;
@@ -3601,6 +3613,7 @@ void clusterBeforeSleep(void) {
 
     /* Reset our flags (not strictly needed since every single function
      * called for flags set should be able to clear its flag). */
+    /* 重置集群的状态 */
     server.cluster->todo_before_sleep = 0;
 }
 
@@ -3759,6 +3772,10 @@ void clusterCloseAllSlots(void) {
 #define CLUSTER_MIN_REJOIN_DELAY 500
 #define CLUSTER_WRITABLE_DELAY 2000
 
+/**
+ * 
+ * 更新集群状态
+ */ 
 void clusterUpdateState(void) {
     int j, new_state;
     int reachable_masters = 0;
@@ -3796,7 +3813,8 @@ void clusterUpdateState(void) {
 
     /* Compute the cluster size, that is the number of master nodes
      * serving at least a single slot.
-     *
+     * 计算集群节点数量
+     * 同时计算集群中可用节点数量
      * At the same time count the number of reachable masters having
      * at least one slot. */
     {
@@ -3819,6 +3837,9 @@ void clusterUpdateState(void) {
 
     /* If we are in a minority partition, change the cluster state
      * to FAIL. */
+    /**
+     * 改变集群的状态
+     */ 
     {
         int needed_quorum = (server.cluster->size / 2) + 1;
 
@@ -3829,6 +3850,9 @@ void clusterUpdateState(void) {
     }
 
     /* Log a state change */
+    /**
+     * 记录集群状态改变的log
+     */ 
     if (new_state != server.cluster->state) {
         mstime_t rejoin_delay = server.cluster_node_timeout;
 
@@ -3927,6 +3951,10 @@ int verifyClusterConfigWithData(void) {
 
 /* Set the specified node 'n' as master for this node.
  * If this node is currently a master, it is turned into a slave. */
+/**
+ * 设置指定node为master
+ * myself为node的从节点
+ */ 
 void clusterSetMaster(clusterNode *n) {
     serverAssert(n != myself);
     serverAssert(myself->numslots == 0);
@@ -4105,6 +4133,9 @@ const char *clusterGetMessageTypeString(int type) {
     return "unknown";
 }
 
+/**
+ * 获取slot
+ */ 
 int getSlotOrReply(client *c, robj *o) {
     long long slot;
 

@@ -1,0 +1,2074 @@
+14838:C 06 May 2019 18:51:27.358 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+14838:C 06 May 2019 18:51:27.358 # Redis version=5.0.2, bits=64, commit=00000000, modified=0, pid=14838, just started
+14838:C 06 May 2019 18:51:27.358 # Configuration loaded
+14839:S 06 May 2019 18:51:27.361 * Increased maximum number of open files to 10032 (it was originally set to 256).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 5.0.2 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 14839
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+14839:S 06 May 2019 18:51:27.363 # Server initialized
+14839:S 06 May 2019 18:51:27.363 * Ready to accept connections
+14839:S 06 May 2019 18:51:27.364 - 0 clients connected (0 replicas), 988208 bytes in use
+14839:S 06 May 2019 18:51:27.365 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:51:27.366 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:51:27.366 * Non blocking connect for SYNC fired the event.
+14839:S 06 May 2019 18:51:27.367 * Master replied to PING, replication can continue...
+14839:S 06 May 2019 18:51:27.368 * Partial resynchronization not possible (no cached master)
+14839:S 06 May 2019 18:51:27.370 * Full resync from master: f7af08669cb71e4fcca18b465e5d38df39e1fda5:0
+14839:S 06 May 2019 18:51:27.391 * MASTER <-> REPLICA sync: receiving 248 bytes from master
+14839:S 06 May 2019 18:51:27.391 * MASTER <-> REPLICA sync: Flushing old data
+14839:S 06 May 2019 18:51:27.391 * MASTER <-> REPLICA sync: Loading DB in memory
+14839:S 06 May 2019 18:51:27.392 * MASTER <-> REPLICA sync: Finished with success
+14839:S 06 May 2019 18:51:27.392 * Background append only file rewriting started by pid 14847
+14839:S 06 May 2019 18:51:27.415 * AOF rewrite child asks to stop sending diffs.
+14847:C 06 May 2019 18:51:27.415 * Parent agreed to stop sending diffs. Finalizing AOF...
+14847:C 06 May 2019 18:51:27.415 * Concatenating 0.00 MB of AOF diff received from parent.
+14847:C 06 May 2019 18:51:27.415 * SYNC append only file rewrite performed
+14839:S 06 May 2019 18:51:27.467 * Background AOF rewrite terminated with success
+14839:S 06 May 2019 18:51:27.468 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+14839:S 06 May 2019 18:51:27.470 * Background AOF rewrite finished successfully
+14839:S 06 May 2019 18:51:27.470 - Background AOF rewrite signal handler took 2665us
+14839:S 06 May 2019 18:51:32.416 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:51:32.417 - 1 clients connected (0 replicas), 2055120 bytes in use
+14839:S 06 May 2019 18:51:37.473 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:51:37.473 - 1 clients connected (0 replicas), 2055152 bytes in use
+14839:S 06 May 2019 18:51:40.629 - Accepted 127.0.0.1:50509
+14839:S 06 May 2019 18:51:42.527 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:51:42.528 - 2 clients connected (0 replicas), 2072000 bytes in use
+14839:S 06 May 2019 18:51:47.586 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:51:47.586 - 2 clients connected (0 replicas), 2072000 bytes in use
+14839:S 06 May 2019 18:51:52.648 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:51:52.648 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:51:57.700 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:51:57.700 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:02.757 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:02.757 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:07.817 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:07.818 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:12.878 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:12.878 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:17.934 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:17.934 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:22.992 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:22.992 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:28.043 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:28.043 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:33.099 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:33.099 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:38.149 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:38.149 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:43.201 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:43.201 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:48.260 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:48.261 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:53.314 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:53.314 - 2 clients connected (0 replicas), 2072016 bytes in use
+14839:S 06 May 2019 18:52:54.967 - Client closed connection
+14839:S 06 May 2019 18:52:58.376 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:52:58.376 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:53:03.435 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:03.435 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:53:08.486 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:08.487 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:53:13.542 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:13.542 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:53:18.597 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:18.597 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:53:23.655 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:23.655 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:53:28.708 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:28.709 - 1 clients connected (0 replicas), 2054432 bytes in use
+14839:S 06 May 2019 18:53:33.759 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:33.760 - 1 clients connected (0 replicas), 2054432 bytes in use
+14839:S 06 May 2019 18:53:38.812 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:38.812 - 1 clients connected (0 replicas), 2054416 bytes in use
+14839:S 06 May 2019 18:53:43.869 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:43.869 - 1 clients connected (0 replicas), 2054416 bytes in use
+14839:S 06 May 2019 18:53:48.926 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:48.926 - 1 clients connected (0 replicas), 2054336 bytes in use
+14839:S 06 May 2019 18:53:53.974 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:53.974 - 1 clients connected (0 replicas), 2054336 bytes in use
+14839:S 06 May 2019 18:53:59.034 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:53:59.034 - 1 clients connected (0 replicas), 2054336 bytes in use
+14839:S 06 May 2019 18:54:04.086 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:04.086 - 1 clients connected (0 replicas), 2054336 bytes in use
+14839:S 06 May 2019 18:54:09.131 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:09.132 - 1 clients connected (0 replicas), 2054336 bytes in use
+14839:S 06 May 2019 18:54:14.186 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:14.186 - 1 clients connected (0 replicas), 2054336 bytes in use
+14839:S 06 May 2019 18:54:19.246 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:19.246 - 1 clients connected (0 replicas), 2054336 bytes in use
+14839:S 06 May 2019 18:54:24.303 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:24.304 - 1 clients connected (0 replicas), 2054336 bytes in use
+14839:S 06 May 2019 18:54:29.358 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:29.358 - 1 clients connected (0 replicas), 2054336 bytes in use
+14839:S 06 May 2019 18:54:30.110 - Client closed connection
+14839:S 06 May 2019 18:54:30.110 # Connection with master lost.
+14839:S 06 May 2019 18:54:30.110 * Caching the disconnected master state.
+14839:S 06 May 2019 18:54:30.377 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:30.378 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:30.388 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:31.399 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:31.399 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:31.405 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:32.413 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:32.413 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:32.418 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:33.428 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:33.429 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:33.434 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:34.447 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:34.447 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:54:34.453 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:34.454 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:34.454 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:35.465 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:35.465 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:35.471 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:36.482 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:36.482 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:36.484 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:37.497 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:37.497 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:37.497 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:38.502 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:38.502 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:38.508 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:39.524 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:39.524 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:54:39.530 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:39.531 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:39.532 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:40.546 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:40.546 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:40.552 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:41.565 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:41.565 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:41.570 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:42.578 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:42.578 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:42.578 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:43.585 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:43.586 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:43.591 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:44.599 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:44.599 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:54:44.605 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:44.606 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:44.606 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:45.616 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:45.617 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:45.622 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:46.634 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:46.634 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:46.640 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:47.649 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:47.650 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:47.655 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:48.665 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:48.666 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:48.671 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:49.682 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:49.682 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:54:49.688 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:49.689 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:49.689 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:50.698 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:50.699 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:50.704 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:51.715 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:51.715 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:51.721 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:52.733 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:52.734 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:52.739 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:53.749 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:53.750 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:53.755 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:54.764 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:54.764 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:54:54.770 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:54.771 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:54.771 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:55.782 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:55.782 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:55.788 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:56.799 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:56.799 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:56.805 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:57.815 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:57.815 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:57.821 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:58.831 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:58.831 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:58.837 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:54:59.848 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:54:59.849 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:54:59.855 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:54:59.856 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:54:59.856 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:00.866 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:00.867 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:00.872 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:01.883 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:01.883 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:01.889 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:02.898 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:02.899 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:02.905 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:03.914 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:03.914 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:03.919 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:04.931 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:04.931 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:04.937 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:04.938 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:04.938 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:05.949 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:05.950 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:05.956 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:06.964 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:06.975 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:06.975 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:07.985 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:07.986 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:07.991 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:09.003 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:09.004 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:09.009 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:10.020 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:10.020 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:10.026 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:10.027 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:10.027 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:11.035 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:11.036 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:11.042 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:12.049 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:12.050 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:12.055 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:13.066 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:13.066 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:13.072 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:14.080 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:14.081 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:14.086 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:15.096 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:15.097 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:15.102 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:15.103 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:15.103 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:16.110 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:16.110 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:16.116 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:17.124 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:17.124 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:17.130 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:18.140 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:18.141 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:18.147 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:19.154 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:19.154 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:19.160 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:20.167 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:20.168 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:20.173 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:20.174 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:20.174 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:21.183 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:21.183 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:21.189 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:22.198 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:22.198 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:22.204 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:23.215 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:23.215 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:23.220 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:24.228 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:24.229 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:24.234 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:25.245 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:25.254 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:25.255 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:25.255 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:25.256 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:26.264 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:26.278 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:26.278 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:27.286 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:27.287 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:27.292 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:28.301 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:28.302 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:28.307 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:29.317 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:29.317 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:29.323 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:30.335 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:30.335 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:30.341 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:30.342 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:30.342 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:31.358 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:31.358 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:31.364 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:32.375 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:32.375 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:32.381 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:33.389 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:33.389 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:33.395 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:34.404 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:34.404 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:34.409 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:35.416 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:35.429 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:35.430 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:35.430 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:35.431 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:36.437 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:36.438 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:36.438 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:37.448 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:37.461 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:37.462 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:38.472 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:38.473 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:38.478 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:39.485 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:39.485 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:39.490 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:40.499 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:40.500 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:40.505 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:40.506 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:40.507 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:41.515 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:41.515 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:41.520 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:42.530 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:42.530 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:42.536 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:43.547 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:43.548 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:43.553 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:44.565 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:44.565 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:44.571 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:45.581 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:45.582 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:45.587 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:45.587 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:45.588 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:46.596 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:46.597 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:46.602 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:47.611 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:47.611 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:47.617 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:48.630 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:48.631 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:48.636 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:49.648 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:49.649 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:49.654 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:50.665 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:50.665 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:50.671 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:50.671 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:50.672 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:51.682 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:51.683 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:51.688 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:52.700 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:52.701 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:52.701 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:53.710 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:53.710 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:53.716 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:54.723 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:54.723 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:54.729 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:55.738 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:55:55.739 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:55:55.744 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:55.746 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:55.746 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:56.757 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:56.758 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:56.763 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:57.771 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:57.771 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:57.776 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:58.782 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:58.783 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:58.788 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:55:59.799 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:55:59.800 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:55:59.805 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:00.814 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:00.814 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:56:00.820 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:00.821 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:00.821 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:01.832 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:01.832 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:01.838 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:02.849 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:02.849 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:02.855 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:03.865 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:03.865 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:03.870 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:04.880 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:04.881 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:04.887 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:05.896 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:05.896 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:56:05.902 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:05.902 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:05.903 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:06.911 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:06.921 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:06.921 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:07.933 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:07.934 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:07.939 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:08.951 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:08.951 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:08.957 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:09.965 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:09.966 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:09.971 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:10.980 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:10.980 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:56:10.986 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:10.986 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:10.987 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:11.998 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:11.998 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:12.004 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:13.014 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:13.014 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:13.020 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:14.031 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:14.032 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:14.037 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:15.047 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:15.048 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:15.054 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:16.064 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:16.064 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:56:16.070 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:16.071 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:16.071 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:17.081 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:17.082 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:17.087 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:18.097 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:18.097 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:18.103 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:19.113 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:19.114 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:19.119 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:20.131 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:20.131 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:20.137 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:21.148 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:21.148 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:56:21.154 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:21.154 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:21.155 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:22.166 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:22.167 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:22.172 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:23.181 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:23.181 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:23.187 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:24.198 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:24.198 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:24.204 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:25.214 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:25.215 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:25.220 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:26.229 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:26.230 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:56:26.235 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:26.236 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:26.236 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:27.247 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:27.248 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:27.253 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:28.264 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:28.264 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:28.270 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:29.279 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:29.280 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:29.286 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:30.297 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:30.298 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:30.303 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:31.311 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:31.312 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:56:31.317 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:31.318 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:31.318 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:32.328 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:32.329 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:32.335 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:33.345 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:33.346 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:33.351 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:34.363 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:34.363 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:34.369 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:35.381 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:35.381 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:35.387 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:36.396 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:36.396 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:56:36.397 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:36.397 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:36.397 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:37.408 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:37.408 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:37.414 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:38.427 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:38.427 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:38.433 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:39.446 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:39.447 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:39.452 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:40.464 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:40.465 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:40.470 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:41.484 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:41.484 - 0 clients connected (0 replicas), 2087552 bytes in use
+14839:S 06 May 2019 18:56:41.490 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:41.491 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:41.491 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 18:56:42.499 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 18:56:42.500 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 18:56:42.505 * Non blocking connect for SYNC fired the event.
+14839:S 06 May 2019 18:56:42.506 * Master replied to PING, replication can continue...
+14839:S 06 May 2019 18:56:42.507 * Trying a partial resynchronization (request f7af08669cb71e4fcca18b465e5d38df39e1fda5:336).
+14839:S 06 May 2019 18:56:42.509 * Full resync from master: c63462a7beac4891fde9f6502550493d0dfd38b8:0
+14839:S 06 May 2019 18:56:42.510 * Discarding previously cached master state.
+14839:S 06 May 2019 18:56:42.579 * MASTER <-> REPLICA sync: receiving 248 bytes from master
+14839:S 06 May 2019 18:56:42.580 * MASTER <-> REPLICA sync: Flushing old data
+14839:S 06 May 2019 18:56:42.581 * MASTER <-> REPLICA sync: Loading DB in memory
+14839:S 06 May 2019 18:56:42.582 * MASTER <-> REPLICA sync: Finished with success
+14839:S 06 May 2019 18:56:42.583 * Background append only file rewriting started by pid 15034
+14839:S 06 May 2019 18:56:42.608 * AOF rewrite child asks to stop sending diffs.
+15034:C 06 May 2019 18:56:42.608 * Parent agreed to stop sending diffs. Finalizing AOF...
+15034:C 06 May 2019 18:56:42.608 * Concatenating 0.00 MB of AOF diff received from parent.
+15034:C 06 May 2019 18:56:42.609 * SYNC append only file rewrite performed
+14839:S 06 May 2019 18:56:42.707 * Background AOF rewrite terminated with success
+14839:S 06 May 2019 18:56:42.708 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+14839:S 06 May 2019 18:56:42.710 * Background AOF rewrite finished successfully
+14839:S 06 May 2019 18:56:42.711 - Background AOF rewrite signal handler took 3542us
+14839:S 06 May 2019 18:56:46.547 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:46.548 - 1 clients connected (0 replicas), 2054096 bytes in use
+14839:S 06 May 2019 18:56:51.595 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:51.595 - 1 clients connected (0 replicas), 2054096 bytes in use
+14839:S 06 May 2019 18:56:56.648 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:56:56.649 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:01.701 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:01.702 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:06.758 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:06.768 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:11.820 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:11.820 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:16.877 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:16.877 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:21.932 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:21.932 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:26.993 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:26.994 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:32.057 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:32.057 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:37.116 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:37.116 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:42.167 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:42.168 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:47.229 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:47.230 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:52.287 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:52.287 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:57:57.347 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:57:57.347 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:02.404 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:02.404 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:07.462 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:07.463 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:12.522 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:12.523 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:17.577 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:17.578 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:22.634 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:22.635 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:27.690 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:27.690 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:32.757 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:32.758 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:37.815 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:37.815 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:42.870 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:42.871 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:47.926 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:47.926 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:52.989 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:52.989 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:58:58.041 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:58:58.042 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:03.098 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:03.098 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:08.151 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:08.151 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:13.197 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:13.197 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:18.251 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:18.252 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:23.309 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:23.310 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:28.362 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:28.362 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:33.411 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:33.411 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:38.455 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:38.455 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:43.503 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:43.504 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:48.548 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:48.549 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:53.605 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:53.606 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 18:59:58.658 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 18:59:58.659 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:03.715 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:03.715 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:08.765 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:08.765 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:13.808 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:13.808 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:18.860 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:18.861 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:23.909 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:23.910 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:28.966 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:28.967 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:34.023 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:34.023 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:39.074 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:39.074 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:44.119 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:44.119 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:49.166 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:49.166 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:54.215 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:54.216 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:00:59.270 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:00:59.271 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:04.318 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:04.319 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:09.376 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:09.377 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:14.430 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:14.430 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:19.482 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:19.482 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:24.533 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:24.533 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:29.595 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:29.596 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:34.649 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:34.650 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:39.701 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:39.702 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:44.755 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:44.755 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:49.804 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:49.804 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:54.861 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:54.861 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:01:59.918 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:01:59.918 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:04.979 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:04.980 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:10.035 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:10.036 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:15.096 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:15.097 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:20.144 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:20.145 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:25.204 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:25.204 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:30.255 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:30.255 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:35.302 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:35.303 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:40.357 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:40.358 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:45.408 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:45.408 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:50.463 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:50.464 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:02:55.522 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:02:55.523 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:00.578 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:00.578 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:05.631 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:05.632 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:10.673 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:10.674 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:15.728 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:15.728 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:20.789 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:20.790 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:25.847 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:25.847 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:30.905 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:30.906 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:35.964 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:35.965 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:41.013 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:41.014 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:46.068 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:46.069 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:51.130 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:51.130 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:03:56.182 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:03:56.182 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:01.234 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:01.235 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:06.283 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:06.283 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:11.339 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:11.339 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:16.396 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:16.396 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:21.447 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:21.448 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:26.499 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:26.499 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:31.557 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:31.563 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:36.617 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:36.628 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:41.686 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:41.686 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:46.726 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:46.727 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:51.784 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:51.784 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:04:56.831 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:04:56.831 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:01.883 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:01.884 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:06.944 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:06.945 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:12.004 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:12.004 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:17.059 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:17.059 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:22.114 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:22.114 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:27.164 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:27.164 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:32.221 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:32.221 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:37.269 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:37.269 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:42.321 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:42.321 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:47.366 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:47.366 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:52.410 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:52.410 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:05:57.463 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:05:57.463 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:02.523 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:02.524 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:07.582 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:07.583 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:12.632 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:12.633 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:17.690 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:17.691 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:22.747 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:22.747 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:27.799 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:27.800 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:28.007 * 1 changes in 900 seconds. Saving...
+14839:S 06 May 2019 19:06:28.008 * Background saving started by pid 15601
+15601:C 06 May 2019 19:06:28.013 * DB saved on disk
+14839:S 06 May 2019 19:06:28.113 * Background saving terminated with success
+14839:S 06 May 2019 19:06:32.859 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:32.859 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:37.907 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:37.907 - 1 clients connected (0 replicas), 2087392 bytes in use
+14839:S 06 May 2019 19:06:42.948 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:42.949 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:48.002 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:48.002 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:53.051 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:53.052 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:06:58.098 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:06:58.099 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:03.150 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:03.150 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:08.201 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:08.202 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:13.244 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:13.245 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:18.299 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:18.299 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:23.351 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:23.351 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:28.395 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:28.396 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:33.446 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:33.447 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:38.499 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:38.499 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:43.550 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:43.550 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:48.602 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:48.603 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:53.651 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:53.652 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:07:58.700 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:07:58.700 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:03.752 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:03.753 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:08.801 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:08.802 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:13.864 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:13.864 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:18.912 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:18.913 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:23.963 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:23.964 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:29.015 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:29.015 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:34.064 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:34.064 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:39.110 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:39.110 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:44.168 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:44.168 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:49.216 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:49.216 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:54.264 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:54.264 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:08:59.314 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:08:59.315 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:09:04.363 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:04.364 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:09:09.416 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:09.417 - 1 clients connected (0 replicas), 2087392 bytes in use
+14839:S 06 May 2019 19:09:14.462 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:14.463 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:09:19.512 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:19.512 - 1 clients connected (0 replicas), 2087392 bytes in use
+14839:S 06 May 2019 19:09:24.559 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:24.559 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:09:29.604 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:29.605 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:09:34.652 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:34.652 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:09:39.707 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:39.716 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:09:44.767 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:44.767 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:09:49.819 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:49.820 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:09:54.867 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:54.867 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:09:59.916 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:09:59.917 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:10:04.963 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:04.964 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:10:10.019 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:10.020 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:10:15.073 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:15.073 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:10:20.130 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:20.130 - 1 clients connected (0 replicas), 2054128 bytes in use
+14839:S 06 May 2019 19:10:23.139 - Accepted 127.0.0.1:52301
+14839:S 06 May 2019 19:10:23.140 - Accepted 127.0.0.1:52302
+14839:S 06 May 2019 19:10:25.183 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:25.184 - 3 clients connected (0 replicas), 2157040 bytes in use
+14839:S 06 May 2019 19:10:30.236 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:30.237 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:10:35.289 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:35.289 - 3 clients connected (0 replicas), 2157040 bytes in use
+14839:S 06 May 2019 19:10:40.335 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:40.336 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:10:45.385 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:45.386 - 3 clients connected (0 replicas), 2157040 bytes in use
+14839:S 06 May 2019 19:10:50.427 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:50.427 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:10:55.483 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:10:55.483 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:00.529 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:00.529 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:05.587 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:05.588 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:10.647 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:10.647 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:15.700 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:15.700 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:20.748 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:20.749 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:25.809 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:25.809 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:30.859 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:30.860 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:11:35.917 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:35.918 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:40.967 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:40.967 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:46.026 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:46.027 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:51.085 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:51.086 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:11:55.288 - Client closed connection
+14839:S 06 May 2019 19:11:55.288 # Connection with master lost.
+14839:S 06 May 2019 19:11:55.289 * Caching the disconnected master state.
+14839:S 06 May 2019 19:11:56.140 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:11:56.141 - 2 clients connected (0 replicas), 2123712 bytes in use
+14839:S 06 May 2019 19:11:56.146 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:11:56.147 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:11:56.147 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:11:57.157 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:11:57.157 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:11:57.163 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:11:58.175 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:11:58.176 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:11:58.181 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:11:59.192 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:11:59.193 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:11:59.198 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:00.208 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:00.208 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:00.210 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:01.221 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:01.221 - 2 clients connected (0 replicas), 2156976 bytes in use
+14839:S 06 May 2019 19:12:01.227 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:01.228 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:01.229 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:02.241 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:02.241 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:02.247 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:03.261 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:03.262 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:03.267 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:04.278 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:04.279 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:04.284 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:05.295 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:05.296 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:05.301 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:06.313 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:06.313 - 2 clients connected (0 replicas), 2156976 bytes in use
+14839:S 06 May 2019 19:12:06.319 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:06.320 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:06.320 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:07.331 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:07.331 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:07.337 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:08.347 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:08.347 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:08.353 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:09.362 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:09.363 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:09.368 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:10.377 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:10.378 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:10.383 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:11.393 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:11.393 - 2 clients connected (0 replicas), 2123712 bytes in use
+14839:S 06 May 2019 19:12:11.399 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:11.399 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:11.399 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:12.408 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:12.409 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:12.414 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:13.424 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:13.424 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:13.430 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:14.442 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:14.443 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:14.448 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:15.462 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:15.463 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:15.468 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:16.480 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:16.480 - 2 clients connected (0 replicas), 2123712 bytes in use
+14839:S 06 May 2019 19:12:16.486 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:16.487 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:16.487 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:17.497 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:17.498 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:17.504 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:18.515 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:18.515 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:18.521 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:19.532 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:19.532 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:19.537 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:20.546 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:20.546 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:20.552 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:21.563 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:21.563 - 2 clients connected (0 replicas), 2123712 bytes in use
+14839:S 06 May 2019 19:12:21.568 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:21.569 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:21.569 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:22.579 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:22.580 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:22.585 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:23.595 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:23.596 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:23.601 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:24.611 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:24.612 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:24.617 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:25.628 * Connecting to MASTER 127.0.0.1:6380
+14839:S 06 May 2019 19:12:25.629 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:25.634 # Error condition on socket for SYNC: Connection refused
+14839:S 06 May 2019 19:12:26.607 * REPLICAOF 127.0.0.1:6382 enabled (user request from 'id=6 addr=127.0.0.1:52301 fd=8 name=sentinel-55d859df-cmd age=123 idle=0 flags=x db=0 sub=0 psub=0 multi=3 qbuf=281 qbuf-free=32487 obl=36 oll=0 omem=0 events=r cmd=exec')
+14839:S 06 May 2019 19:12:26.609 # CONFIG REWRITE executed with success.
+14839:S 06 May 2019 19:12:26.643 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:26.644 - 2 clients connected (0 replicas), 2157024 bytes in use
+14839:S 06 May 2019 19:12:26.644 * Connecting to MASTER 127.0.0.1:6382
+14839:S 06 May 2019 19:12:26.644 * MASTER <-> REPLICA sync started
+14839:S 06 May 2019 19:12:26.644 * Non blocking connect for SYNC fired the event.
+14839:S 06 May 2019 19:12:26.645 * Master replied to PING, replication can continue...
+14839:S 06 May 2019 19:12:26.646 * Trying a partial resynchronization (request c63462a7beac4891fde9f6502550493d0dfd38b8:7269).
+14839:S 06 May 2019 19:12:26.647 * Successful partial resynchronization with master.
+14839:S 06 May 2019 19:12:26.647 # Master replication ID changed to 70d8800c73899b619f42ef8a2999f94383aa847a
+14839:S 06 May 2019 19:12:26.647 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+14839:S 06 May 2019 19:12:27.677 - Client closed connection
+14839:S 06 May 2019 19:12:27.678 - Client closed connection
+14839:S 06 May 2019 19:12:27.770 - Accepted 127.0.0.1:52594
+14839:S 06 May 2019 19:12:27.770 - Accepted 127.0.0.1:52595
+14839:S 06 May 2019 19:12:31.697 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:31.697 - 3 clients connected (0 replicas), 2090480 bytes in use
+14839:S 06 May 2019 19:12:36.748 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:36.757 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:12:41.801 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:41.801 - 3 clients connected (0 replicas), 2090480 bytes in use
+14839:S 06 May 2019 19:12:46.851 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:46.852 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:12:51.897 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:51.898 - 3 clients connected (0 replicas), 2090480 bytes in use
+14839:S 06 May 2019 19:12:56.944 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:12:56.944 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:13:02.000 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:02.001 - 3 clients connected (0 replicas), 2090480 bytes in use
+14839:S 06 May 2019 19:13:07.050 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:07.051 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:13:12.098 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:12.098 - 3 clients connected (0 replicas), 2090480 bytes in use
+14839:S 06 May 2019 19:13:17.148 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:17.149 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:13:22.201 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:22.201 - 3 clients connected (0 replicas), 2090480 bytes in use
+14839:S 06 May 2019 19:13:27.250 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:27.250 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:13:32.306 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:32.306 - 3 clients connected (0 replicas), 2090480 bytes in use
+14839:S 06 May 2019 19:13:37.364 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:37.364 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:13:42.415 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:42.415 - 3 clients connected (0 replicas), 2090480 bytes in use
+14839:S 06 May 2019 19:13:45.519 - Accepted 127.0.0.1:52839
+14839:S 06 May 2019 19:13:47.469 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:47.470 - 4 clients connected (0 replicas), 2108368 bytes in use
+14839:S 06 May 2019 19:13:52.522 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:52.523 - 4 clients connected (0 replicas), 2108336 bytes in use
+14839:S 06 May 2019 19:13:53.394 - Client closed connection
+14839:S 06 May 2019 19:13:57.581 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:13:57.581 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:14:02.637 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:02.638 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:14:07.696 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:07.697 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:14:12.748 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:12.748 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:14:17.793 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:17.794 - 3 clients connected (0 replicas), 2123792 bytes in use
+14839:S 06 May 2019 19:14:22.848 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:22.848 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:14:27.908 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:27.908 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:14:32.964 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:32.965 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:14:38.022 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:38.022 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:14:43.077 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:43.077 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:14:48.126 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:48.127 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:14:53.182 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:53.183 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:14:58.231 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:14:58.231 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:15:03.288 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:03.289 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:15:08.342 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:08.342 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:15:13.397 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:13.397 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:15:18.455 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:18.455 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:15:23.507 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:23.508 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:15:28.566 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:28.567 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:15:33.624 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:33.624 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:15:38.675 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:38.675 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:15:43.732 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:43.732 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:15:48.786 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:48.786 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:15:53.846 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:53.847 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:15:58.904 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:15:58.905 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:16:03.963 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:03.963 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:16:09.018 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:09.019 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:16:14.080 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:14.080 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:16:19.135 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:19.136 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:16:24.193 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:24.193 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:16:29.245 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:29.246 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:16:34.309 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:34.310 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:16:39.372 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:39.372 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:16:44.422 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:44.422 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:16:49.470 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:49.471 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:16:54.523 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:54.523 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:16:59.589 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:16:59.589 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:17:04.645 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:04.645 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:17:09.704 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:09.704 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:17:14.748 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:14.749 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:17:19.810 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:19.810 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:17:24.869 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:24.869 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:17:29.928 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:29.928 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:17:34.992 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:34.992 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:17:40.050 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:40.051 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:17:45.110 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:45.110 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:17:50.163 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:50.164 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:17:55.218 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:17:55.219 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:18:00.274 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:00.274 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:18:05.327 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:05.327 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:18:10.392 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:10.392 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:18:15.443 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:15.443 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:18:20.490 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:20.491 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:18:25.537 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:25.537 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:18:30.588 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:30.588 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:18:35.634 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:35.634 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:18:40.684 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:40.684 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:18:45.735 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:45.736 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:18:50.794 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:50.794 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:18:55.847 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:18:55.847 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:19:00.903 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:00.903 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:19:05.952 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:05.952 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:19:11.001 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:11.002 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:19:16.047 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:16.048 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:19:21.102 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:21.102 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:19:26.158 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:26.158 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:19:31.215 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:31.215 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:19:36.272 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:36.272 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:19:41.328 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:41.329 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:19:46.389 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:46.389 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:19:51.436 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:51.436 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:19:56.494 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:19:56.495 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:20:01.546 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:01.546 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:20:06.595 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:06.602 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:20:11.645 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:11.645 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:20:16.704 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:16.704 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:20:21.757 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:21.757 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:20:26.806 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:26.806 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:20:31.860 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:31.860 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:20:36.918 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:36.919 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:20:41.965 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:41.966 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:20:47.015 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:47.016 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:20:52.070 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:52.071 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:20:57.129 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:20:57.130 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:21:02.178 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:02.178 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:21:07.230 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:07.230 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:21:12.286 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:12.286 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:21:17.341 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:17.341 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:21:22.395 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:22.395 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:21:27.450 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:27.450 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:21:32.496 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:32.496 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:21:37.541 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:37.542 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:21:42.594 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:42.595 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:21:47.646 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:47.647 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:21:52.712 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:52.712 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:21:57.772 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:21:57.772 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:22:02.825 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:02.826 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:22:07.886 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:07.887 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:22:12.936 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:12.937 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:22:17.994 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:17.994 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:22:23.048 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:23.048 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:22:28.103 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:28.103 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:22:33.165 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:33.166 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:22:38.227 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:38.227 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:22:43.281 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:43.282 - 3 clients connected (0 replicas), 2123792 bytes in use
+14839:S 06 May 2019 19:22:48.341 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:48.342 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:22:53.393 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:53.393 - 3 clients connected (0 replicas), 2123792 bytes in use
+14839:S 06 May 2019 19:22:58.449 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:22:58.449 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:23:03.497 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:03.497 - 3 clients connected (0 replicas), 2123792 bytes in use
+14839:S 06 May 2019 19:23:08.543 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:08.543 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:23:13.597 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:13.597 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:23:18.644 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:18.644 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:23:23.701 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:23.702 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:23:28.756 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:28.757 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:23:33.815 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:33.816 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:23:38.876 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:38.876 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:23:43.928 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:43.928 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:23:48.983 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:48.984 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:23:54.040 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:54.040 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:23:59.093 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:23:59.094 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:24:04.153 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:04.153 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:24:09.203 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:09.204 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:24:14.256 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:14.257 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:24:19.306 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:19.307 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:24:24.364 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:24.364 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:24:29.423 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:29.424 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:24:34.471 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:34.472 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:24:39.525 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:39.526 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:24:44.582 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:44.582 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:24:49.633 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:49.633 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:24:54.681 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:54.682 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:24:59.734 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:24:59.734 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:25:04.779 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:04.779 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:25:09.827 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:09.827 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:25:14.887 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:14.887 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:25:19.935 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:19.936 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:25:24.986 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:24.987 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:25:30.033 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:30.033 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:25:35.090 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:35.091 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:25:40.145 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:40.145 - 3 clients connected (0 replicas), 2123792 bytes in use
+14839:S 06 May 2019 19:25:45.199 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:45.200 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:25:50.254 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:50.254 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:25:55.309 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:25:55.309 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:26:00.360 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:00.361 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:26:05.418 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:05.418 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:26:10.475 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:10.477 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:26:15.532 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:15.532 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:26:20.583 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:20.583 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:26:25.633 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:25.633 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:26:30.687 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:30.687 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:26:35.737 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:35.738 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:26:40.790 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:40.790 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:26:45.847 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:45.847 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:26:50.901 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:50.902 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:26:55.954 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:26:55.955 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:27:01.011 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:01.012 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:27:06.072 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:06.073 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:27:11.130 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:11.130 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:27:16.181 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:16.181 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:27:21.234 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:21.234 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:27:26.288 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:26.289 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:27:31.343 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:31.343 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:27:36.406 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:36.407 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:27:41.451 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:41.451 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:27:46.509 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:46.510 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:27:51.559 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:51.559 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:27:56.615 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:27:56.616 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:28:01.663 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:01.663 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:28:06.724 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:06.725 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:28:11.785 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:11.785 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:28:16.856 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:16.856 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:28:21.906 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:21.906 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:28:26.957 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:26.958 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:28:32.002 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:32.003 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:28:37.050 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:37.050 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:28:42.120 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:42.120 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:28:47.178 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:47.178 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:28:52.240 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:52.240 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:28:57.307 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:28:57.308 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:29:02.373 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:02.374 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:29:07.435 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:07.436 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:29:12.495 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:12.495 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:29:17.552 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:17.552 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:29:22.612 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:22.612 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:29:27.673 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:27.673 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:29:32.739 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:32.739 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:29:37.799 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:37.799 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:29:42.860 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:42.861 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:29:47.911 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:47.912 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:29:52.956 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:52.956 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:29:58.019 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:29:58.020 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:30:03.087 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:03.088 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:30:08.142 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:08.143 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:30:13.210 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:13.211 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:30:18.265 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:18.265 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:30:23.329 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:23.329 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:30:28.384 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:28.385 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:30:33.439 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:33.439 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:30:38.501 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:38.501 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:30:43.561 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:43.561 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:30:48.625 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:48.626 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:30:53.677 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:53.678 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:30:58.737 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:30:58.737 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:31:03.790 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:03.791 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:31:08.836 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:08.836 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:31:13.874 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:13.874 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:31:18.931 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:18.932 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:31:23.999 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:24.000 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:31:29.072 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:29.072 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:31:34.143 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:34.143 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:31:39.201 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:39.201 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:31:44.259 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:44.259 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:31:49.317 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:49.317 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:31:54.370 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:54.371 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:31:59.441 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:31:59.442 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:32:04.503 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:04.504 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:32:09.553 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:09.553 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:32:14.616 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:14.616 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:32:19.677 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:19.677 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:32:24.731 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:24.732 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:32:29.784 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:29.784 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:32:34.834 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:34.835 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:32:39.897 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:39.897 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:32:44.954 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:44.955 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:32:50.009 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:50.009 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:32:55.063 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:32:55.063 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:33:00.127 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:00.127 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:33:05.183 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:05.183 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:33:10.241 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:10.241 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:33:15.290 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:15.290 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:33:20.348 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:20.348 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:33:25.404 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:25.405 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:33:30.465 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:30.466 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:33:35.534 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:35.535 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:33:40.605 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:40.606 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:33:45.673 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:45.673 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:33:50.738 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:50.739 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:33:55.801 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:33:55.802 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:34:00.843 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:00.844 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:34:05.901 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:05.902 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:34:10.948 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:10.949 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:34:16.014 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:16.015 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:34:21.076 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:21.076 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:34:26.143 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:26.143 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:34:31.206 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:31.206 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:34:36.259 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:36.260 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:34:41.316 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:41.317 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:34:46.370 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:46.370 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:34:51.421 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:51.422 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:34:56.472 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:34:56.473 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:35:01.519 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:01.520 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:35:06.568 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:06.573 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:35:11.621 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:11.622 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:35:16.685 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:16.685 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:35:21.742 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:21.743 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:35:26.795 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:26.796 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:35:31.857 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:31.857 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:35:36.918 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:36.919 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:35:41.978 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:41.978 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:35:47.036 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:47.037 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:35:52.094 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:52.095 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:35:57.154 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:35:57.155 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:36:02.214 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:02.214 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:36:07.266 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:07.267 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:36:12.339 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:12.340 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:36:17.398 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:17.398 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:36:22.461 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:22.461 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:36:27.527 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:27.527 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:36:32.579 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:32.579 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:36:37.634 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:37.634 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:36:42.697 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:42.698 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:36:47.755 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:47.755 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:36:52.826 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:52.826 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:36:57.888 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:36:57.888 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:37:02.953 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:02.953 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:37:08.015 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:08.016 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:37:13.076 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:13.076 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:37:18.135 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:18.136 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:37:23.198 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:23.198 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:37:28.269 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:28.269 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:37:33.329 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:33.329 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:37:38.383 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:38.384 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:37:43.432 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:43.432 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:37:48.484 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:48.484 - 3 clients connected (0 replicas), 2090496 bytes in use
+14839:S 06 May 2019 19:37:53.535 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:53.536 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:37:58.590 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:37:58.590 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:38:03.645 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:03.645 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:38:08.701 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:08.701 - 3 clients connected (0 replicas), 2157024 bytes in use
+14839:S 06 May 2019 19:38:13.759 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:13.759 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:38:18.823 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:18.824 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:38:23.884 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:23.884 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:38:28.941 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:28.941 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:38:33.995 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:33.995 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:38:39.056 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:39.057 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:38:44.116 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:44.117 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:38:49.173 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:49.174 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:38:54.242 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:54.243 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:38:59.300 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:38:59.301 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:39:04.363 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:04.364 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:39:09.418 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:09.418 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:39:14.482 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:14.483 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:39:19.540 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:19.540 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:39:24.586 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:24.586 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:39:29.653 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:29.653 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:39:34.718 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:34.719 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:39:39.778 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:39.779 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:39:44.839 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:44.840 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:39:49.903 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:49.903 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:39:54.968 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:39:54.968 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:40:00.023 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:00.024 - 3 clients connected (0 replicas), 2123760 bytes in use
+14839:S 06 May 2019 19:40:05.087 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:05.087 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:40:10.154 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:10.155 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:40:15.206 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:15.206 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:40:20.261 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:20.262 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:40:25.311 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:25.312 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:40:30.364 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:30.364 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:40:35.413 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:35.414 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:40:40.473 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:40.473 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:40:45.524 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:45.524 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:40:50.582 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:50.582 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:40:55.641 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:40:55.641 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:41:00.691 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:00.692 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:41:05.759 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:05.760 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:41:10.811 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:10.812 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:41:15.858 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:15.859 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:41:20.922 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:20.922 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:41:25.988 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:25.989 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:41:31.045 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:31.045 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:41:36.097 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:36.098 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:41:41.150 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:41.150 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:41:46.216 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:46.217 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:41:51.277 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:51.278 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:41:56.334 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:41:56.335 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:42:01.395 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:01.396 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:42:06.465 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:06.465 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:42:11.515 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:11.515 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:42:16.577 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:16.577 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:42:21.633 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:21.634 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:42:26.692 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:26.692 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:42:31.741 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:31.742 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:42:36.798 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:36.798 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:42:41.850 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:41.850 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:42:46.895 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:46.895 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:42:51.948 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:51.948 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:42:57.008 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:42:57.008 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:43:02.069 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:02.070 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:43:07.129 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:07.129 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:43:12.201 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:12.201 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:43:17.253 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:17.254 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:43:22.300 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:22.301 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:43:27.353 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:27.353 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:43:32.407 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:32.407 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:43:37.471 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:37.475 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:43:42.523 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:42.523 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:43:47.579 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:47.580 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:43:52.638 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:52.639 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:43:57.680 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:43:57.680 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:44:02.736 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:02.736 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:44:07.794 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:07.794 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:44:12.853 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:12.854 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:44:17.907 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:17.907 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:44:22.965 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:22.965 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:44:28.041 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:28.041 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:44:33.110 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:33.110 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:44:38.179 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:38.180 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:44:43.236 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:43.236 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:44:48.296 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:48.297 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:44:53.375 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:53.375 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:44:58.444 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:44:58.444 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:45:03.518 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:03.518 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:45:08.577 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:08.577 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:45:13.651 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:13.652 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:45:18.723 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:18.724 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:45:23.800 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:23.801 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:45:28.854 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:28.855 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:45:33.900 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:33.901 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:45:38.948 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:38.949 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:45:43.995 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:43.995 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:45:49.047 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:49.047 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:45:54.101 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:54.102 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:45:59.157 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:45:59.158 - 3 clients connected (0 replicas), 2090528 bytes in use
+14839:S 06 May 2019 19:46:04.214 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:04.214 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:46:09.268 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:09.269 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:46:14.334 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:14.335 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:46:19.401 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:19.402 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:46:24.467 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:24.467 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:46:29.527 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:29.528 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:46:34.599 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:34.599 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:46:39.658 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:39.659 - 3 clients connected (0 replicas), 2157056 bytes in use
+14839:S 06 May 2019 19:46:44.734 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:44.735 - 3 clients connected (0 replicas), 2123776 bytes in use
+14839:S 06 May 2019 19:46:49.811 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:49.811 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:46:54.883 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:54.884 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:46:59.960 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:46:59.960 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:47:05.025 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:05.025 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:47:10.100 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:10.100 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:47:15.171 - DB 0: 5 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:15.171 - 3 clients connected (0 replicas), 2090512 bytes in use
+14839:S 06 May 2019 19:47:16.491 * 1 changes in 900 seconds. Saving...
+14839:S 06 May 2019 19:47:16.492 * Background saving started by pid 18552
+18552:C 06 May 2019 19:47:16.494 * DB saved on disk
+14839:S 06 May 2019 19:47:16.595 * Background saving terminated with success
+14839:S 06 May 2019 19:47:20.231 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:20.231 - 3 clients connected (0 replicas), 2123968 bytes in use
+14839:S 06 May 2019 19:47:25.306 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:25.307 - 3 clients connected (0 replicas), 2090720 bytes in use
+14839:S 06 May 2019 19:47:30.372 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:30.372 - 3 clients connected (0 replicas), 2090704 bytes in use
+14839:S 06 May 2019 19:47:35.441 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:35.441 - 3 clients connected (0 replicas), 2090720 bytes in use
+14839:S 06 May 2019 19:47:40.514 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:40.515 - 3 clients connected (0 replicas), 2090704 bytes in use
+14839:S 06 May 2019 19:47:45.576 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:45.576 - 3 clients connected (0 replicas), 2090704 bytes in use
+14839:S 06 May 2019 19:47:50.648 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:50.648 - 3 clients connected (0 replicas), 2090704 bytes in use
+14839:S 06 May 2019 19:47:55.726 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:47:55.726 - 3 clients connected (0 replicas), 2090704 bytes in use
+14839:S 06 May 2019 19:48:00.805 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:00.806 - 3 clients connected (0 replicas), 2123968 bytes in use
+14839:S 06 May 2019 19:48:05.873 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:05.874 - 3 clients connected (0 replicas), 2090720 bytes in use
+14839:S 06 May 2019 19:48:10.945 - DB 0: 6 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:10.946 - 3 clients connected (0 replicas), 2090704 bytes in use
+14839:S 06 May 2019 19:48:16.012 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:16.012 - 3 clients connected (0 replicas), 2124048 bytes in use
+14839:S 06 May 2019 19:48:21.080 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:21.081 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:48:26.154 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:26.154 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:48:31.220 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:31.221 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:48:36.283 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:36.283 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:48:41.347 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:41.348 - 3 clients connected (0 replicas), 2124048 bytes in use
+14839:S 06 May 2019 19:48:46.408 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:46.408 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:48:51.462 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:51.462 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:48:56.528 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:48:56.529 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:49:01.577 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:01.578 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:49:06.633 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:06.643 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:49:11.691 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:11.691 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:49:16.754 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:16.755 - 3 clients connected (0 replicas), 2157328 bytes in use
+14839:S 06 May 2019 19:49:21.811 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:21.811 - 3 clients connected (0 replicas), 2124048 bytes in use
+14839:S 06 May 2019 19:49:26.867 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:26.867 - 3 clients connected (0 replicas), 2157328 bytes in use
+14839:S 06 May 2019 19:49:31.934 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:31.934 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:49:36.992 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:36.992 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:49:42.060 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:42.060 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:49:47.127 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:47.128 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:49:52.195 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:52.196 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:49:57.251 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:49:57.251 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:50:02.303 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:02.303 - 3 clients connected (0 replicas), 2124048 bytes in use
+14839:S 06 May 2019 19:50:07.359 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:07.359 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:50:12.421 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:12.422 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:50:17.487 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:17.487 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:50:22.546 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:22.546 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:50:27.604 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:27.604 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:50:32.679 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:32.679 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:50:37.747 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:37.748 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:50:42.811 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:42.812 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:50:47.870 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:47.871 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:50:52.940 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:52.941 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:50:58.007 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:50:58.007 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:51:03.061 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:03.061 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:51:08.116 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:08.117 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:51:13.162 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:13.163 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:51:18.218 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:18.218 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:51:23.277 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:23.278 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:51:28.336 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:28.337 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:51:33.394 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:33.394 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:51:38.462 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:38.463 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:51:43.534 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:43.535 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:51:48.604 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:48.604 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:51:53.664 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:53.664 - 3 clients connected (0 replicas), 2157328 bytes in use
+14839:S 06 May 2019 19:51:58.716 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:51:58.716 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:52:03.771 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:03.771 - 3 clients connected (0 replicas), 2124048 bytes in use
+14839:S 06 May 2019 19:52:08.827 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:08.828 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:52:13.894 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:13.895 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:52:18.960 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:18.961 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:52:24.026 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:24.027 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:52:29.088 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:29.089 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:52:34.147 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:34.147 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:52:39.211 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:39.212 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:52:44.267 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:44.268 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:52:49.329 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:49.329 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:52:54.389 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:54.390 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:52:59.450 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:52:59.451 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:53:04.522 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:04.522 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:53:09.584 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:09.585 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:53:14.658 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:14.658 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:53:19.733 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:19.733 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:53:24.804 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:24.804 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:53:29.872 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:29.872 - 3 clients connected (0 replicas), 2124048 bytes in use
+14839:S 06 May 2019 19:53:34.941 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:34.941 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:53:40.014 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:40.014 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:53:45.073 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:45.074 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:53:50.133 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:50.133 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:53:55.195 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:53:55.196 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:54:00.265 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:54:00.266 - 3 clients connected (0 replicas), 2157328 bytes in use
+14839:S 06 May 2019 19:54:05.317 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:54:05.317 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:54:10.377 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:54:10.378 - 3 clients connected (0 replicas), 2124048 bytes in use
+14839:S 06 May 2019 19:54:15.446 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:54:15.446 - 3 clients connected (0 replicas), 2090800 bytes in use
+14839:S 06 May 2019 19:54:20.507 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:54:20.507 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:54:25.551 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:54:25.551 - 3 clients connected (0 replicas), 2090784 bytes in use
+14839:S 06 May 2019 19:54:30.607 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+14839:S 06 May 2019 19:54:30.607 - 3 clients connected (0 replicas), 2090784 bytes in use

@@ -1,0 +1,623 @@
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [WARN] 
+______________________________
+\                             \           _         ______ |
+ \                             \        /   \___-=O'/|O'/__|
+  \  redis-shake, here we go !! \_______\          / | /    )
+  /                             /        '/-==__ _/__|/__=-|  -GM
+ /                             /         *             \ | |
+/                             /                        (o)
+------------------------------
+if you have any problem, please visit https://github.com/alibaba/RedisShake/wiki/FAQ
+
+2019/05/06 19:46:21 [INFO] redis-shake configuration: {"Id":"redis-shake","LogFile":"/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/redis_shake.log","LogLevel":"info","SystemProfile":9310,"HttpProfile":9320,"NCpu":0,"Parallel":32,"InputRdb":"/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/local.rdb","OutputRdb":"","SourceAddress":"127.0.0.1:6380","SourcePasswordRaw":"","SourcePasswordEncoding":"","SourceVersion":0,"SourceAuthType":"","TargetAddress":"127.0.0.1:6383","TargetPasswordRaw":"","TargetPasswordEncoding":"","TargetVersion":0,"TargetDB":-1,"TargetAuthType":"","FakeTime":"","Rewrite":true,"FilterDB":"","FilterKey":[],"FilterSlot":[],"BigKeyThreshold":524288000,"Psync":false,"Metric":true,"MetricPrintLog":false,"HeartbeatUrl":"","HeartbeatInterval":3,"HeartbeatExternal":"test external","HeartbeatNetworkInterface":"","SenderSize":104857600,"SenderCount":5000,"SenderDelayChannelSize":65535,"KeepAlive":0,"PidPath":"/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/","ScanKeyNumber":50,"ScanSpecialCloud":"","ScanKeyFile":"","ReplaceHashTag":false,"ExtraInfo":false,"SockFileName":"","SockFileSize":0,"HeartbeatIp":"127.0.0.1","ShiftTime":0,"TargetRedisVersion":"5.0.2","TargetReplace":false}
+2019/05/06 19:46:21 [INFO] sync from '127.0.0.1:6380' to '127.0.0.1:6383' with http-port[9320]
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6380] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6380] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] rdb file size = 251
+2019/05/06 19:46:21 [INFO] Aux information key:redis-ver value:5.0.2
+2019/05/06 19:46:21 [INFO] Aux information key:redis-bits value:64
+2019/05/06 19:46:21 [INFO] Aux information key:ctime value:1557143181
+2019/05/06 19:46:21 [INFO] Aux information key:used-mem value:2141728
+2019/05/06 19:46:21 [INFO] Aux information key:repl-stream-db value:0
+2019/05/06 19:46:21 [INFO] Aux information key:repl-id value:70d8800c73899b619f42ef8a2999f94383aa847a
+2019/05/06 19:46:21 [INFO] Aux information key:repl-offset value:142995
+2019/05/06 19:46:21 [INFO] Aux information key:aof-preamble value:0
+2019/05/06 19:46:21 [INFO] db_size:5 expire_size:0
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] total=251 -          251 [100%]  entry=5           
+2019/05/06 19:46:21 [INFO] sync rdb done
+2019/05/06 19:46:21 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:46:21 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:46:21 [INFO] auth OK!
+2019/05/06 19:46:21 [INFO] Event:IncrSyncStart	Id:redis-shake	
+2019/05/06 19:46:21 [WARN] GetFakeSlaveOffset not enable when psync == false
+2019/05/06 19:46:22 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:23 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:24 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:25 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:26 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:27 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:28 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:29 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:30 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:31 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:32 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:33 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:34 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:35 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:36 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:37 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:38 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:39 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:40 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:41 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:42 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:43 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:44 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:45 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:46 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:47 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:48 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:49 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:50 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:51 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:52 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:53 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:54 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:46:55 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:56 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:57 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:46:58 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:46:59 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:00 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:01 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:02 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:03 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:04 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:05 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:06 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:07 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:08 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:09 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:10 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:11 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:12 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:13 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:14 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:15 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:16 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:47:17 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:18 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:19 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:20 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:21 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:22 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:23 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:25 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:26 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:27 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:28 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:29 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:30 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:31 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:32 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:33 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:34 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:35 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:36 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:37 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:38 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:39 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:40 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:41 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:42 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:43 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:44 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:45 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:46 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:47 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:48 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:49 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:50 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:51 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:52 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:53 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:54 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:55 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:56 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:47:57 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:47:58 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:47:59 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:00 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:01 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:02 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:03 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:04 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:05 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:06 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:48:07 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:08 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:09 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:10 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:11 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:12 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:48:13 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:14 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:15 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:16 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:48:17 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:18 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:19 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:20 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:21 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:22 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:23 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:24 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:25 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:26 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:48:27 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:28 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:29 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:30 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:31 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:32 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:33 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:34 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:35 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:36 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:37 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:38 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:39 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:40 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:41 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:42 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:43 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:44 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:45 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:46 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:47 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:48 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:49 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:50 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:51 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:52 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:53 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:54 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:55 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:48:56 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:57 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:58 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:48:59 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:00 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:01 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:02 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:03 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:04 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:05 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:06 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:07 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:49:08 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:09 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:10 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:11 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:12 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:13 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:14 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:15 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:16 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:17 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:49:18 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:19 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:20 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:21 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:22 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:23 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:24 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:25 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:26 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:27 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:49:28 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:29 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:30 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:31 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:32 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:33 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:34 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:35 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:36 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:37 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:49:38 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:39 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:40 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:41 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:42 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:43 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:44 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:45 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:46 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:47 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:49:48 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:49 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:50 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:51 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:52 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:53 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:54 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:55 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:49:56 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:57 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:49:58 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:49:59 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:00 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:01 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:02 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:03 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:04 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:05 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:06 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:07 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:08 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:09 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:10 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:11 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:12 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:13 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:14 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:15 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:16 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:17 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:18 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:50:19 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:20 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:21 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:22 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:23 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:24 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:25 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:26 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:27 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:28 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:50:29 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:30 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:31 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:32 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:33 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:34 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:35 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:36 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:37 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:38 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:50:39 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:40 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:41 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:42 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:43 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:44 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:45 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:46 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:47 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:48 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:50:49 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:50 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:51 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:52 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:53 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:54 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:55 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:56 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:50:57 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:50:58 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:50:59 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:00 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:01 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:02 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:03 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:04 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:05 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:06 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:07 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:08 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:51:09 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:10 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:11 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:12 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:13 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:14 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:15 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:16 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:17 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:18 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:19 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:20 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:21 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:22 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:23 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:24 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:25 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:26 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:27 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:28 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:29 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:30 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:31 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:32 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:33 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:34 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:35 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:36 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:37 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:38 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:39 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:40 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:41 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:42 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:43 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:44 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:45 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:46 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:47 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:48 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:49 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:50 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:51 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:52 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:53 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:54 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:55 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:56 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:51:57 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:58 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:51:59 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:00 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:01 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:02 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:03 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:04 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:05 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:06 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:07 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:08 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:09 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:10 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:11 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:12 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:13 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:14 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:15 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:16 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:17 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:18 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:19 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:20 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:21 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:22 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:23 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:24 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:25 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:26 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:27 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:28 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:29 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:30 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:31 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:32 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:33 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:34 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:35 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:36 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:37 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:38 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:39 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:40 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:41 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:42 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:43 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:44 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:45 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:46 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:47 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:48 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:49 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:50 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:51 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:52 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:53 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:54 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:55 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:56 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:52:57 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:58 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:52:59 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:53:00 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:01 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:03 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:04 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:05 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:06 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:07 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:08 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:09 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:10 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:53:11 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:12 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:13 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:14 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:15 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:16 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:17 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:18 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:19 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:20 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:53:21 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:22 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:23 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:24 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:25 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:26 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:27 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:28 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:29 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:30 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:53:31 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:32 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:33 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:34 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:35 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:36 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:37 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:38 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:39 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:40 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:53:41 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:42 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:43 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:44 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:45 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:46 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:47 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:48 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:49 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:50 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:53:51 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:52 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:53 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:54 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:55 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:56 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:57 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:53:58 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:53:59 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:00 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:01 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:54:02 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:03 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:04 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:05 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:06 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:07 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:08 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:09 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:10 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:11 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:54:12 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:13 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:14 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:15 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:16 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:17 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:18 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:19 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:20 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:21 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:54:22 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:23 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:24 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:25 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:26 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:27 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:28 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:29 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:30 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:31 [INFO] sync:  +forward=2      +nbypass=0      +nbytes=0
+2019/05/06 19:54:32 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0
+2019/05/06 19:54:33 [INFO] sync:  +forward=1      +nbypass=0      +nbytes=0
+2019/05/06 19:54:34 [INFO] sync:  +forward=0      +nbypass=0      +nbytes=0

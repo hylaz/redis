@@ -1,0 +1,139 @@
+2019/05/06 19:41:43 [PANIC] cannot connect to '127.0.0.1:20551'
+[error]: dial tcp 127.0.0.1:20551: connect: connection refused
+[stack]: 
+    4   /Users/hailanzhou/hylaz/redis/plugins/RedisShake/src/redis-shake/common/utils.go:42
+            redis-shake/common.OpenNetConn
+    3   /Users/hailanzhou/hylaz/redis/plugins/RedisShake/src/redis-shake/common/utils.go:29
+            redis-shake/common.OpenRedisConn
+    2   /Users/hailanzhou/hylaz/redis/plugins/RedisShake/src/redis-shake/common/utils.go:830
+            redis-shake/common.GetRedisVersion
+    1   /Users/hailanzhou/hylaz/redis/plugins/RedisShake/src/redis-shake/main/main.go:339
+            main.sanitizeOptions
+    0   /Users/hailanzhou/hylaz/redis/plugins/RedisShake/src/redis-shake/main/main.go:83
+            main.main
+        ... ...
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [WARN] 
+______________________________
+\                             \           _         ______ |
+ \                             \        /   \___-=O'/|O'/__|
+  \  redis-shake, here we go !! \_______\          / | /    )
+  /                             /        '/-==__ _/__|/__=-|  -GM
+ /                             /         *             \ | |
+/                             /                        (o)
+------------------------------
+if you have any problem, please visit https://github.com/alibaba/RedisShake/wiki/FAQ
+
+2019/05/06 19:43:32 [INFO] redis-shake configuration: {"Id":"redis-shake","LogFile":"/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/redis_shake.log","LogLevel":"info","SystemProfile":9310,"HttpProfile":9320,"NCpu":0,"Parallel":32,"InputRdb":"/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/local.rdb","OutputRdb":"","SourceAddress":"127.0.0.1:6380","SourcePasswordRaw":"","SourcePasswordEncoding":"","SourceVersion":0,"SourceAuthType":"","TargetAddress":"127.0.0.1:6383","TargetPasswordRaw":"","TargetPasswordEncoding":"","TargetVersion":0,"TargetDB":-1,"TargetAuthType":"","FakeTime":"","Rewrite":true,"FilterDB":"","FilterKey":[],"FilterSlot":[],"BigKeyThreshold":524288000,"Psync":false,"Metric":true,"MetricPrintLog":false,"HeartbeatUrl":"","HeartbeatInterval":3,"HeartbeatExternal":"test external","HeartbeatNetworkInterface":"","SenderSize":104857600,"SenderCount":5000,"SenderDelayChannelSize":65535,"KeepAlive":0,"PidPath":"/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/","ScanKeyNumber":50,"ScanSpecialCloud":"","ScanKeyFile":"","ReplaceHashTag":false,"ExtraInfo":false,"SockFileName":"","SockFileSize":0,"HeartbeatIp":"127.0.0.1","ShiftTime":0,"TargetRedisVersion":"5.0.2","TargetReplace":false}
+2019/05/06 19:43:32 [INFO] restore from '/Users/hailanzhou/hylaz/redis/doc/redis-shake/run/local.rdb' to '127.0.0.1:6383'
+2019/05/06 19:43:32 [INFO] Aux information key:redis-ver value:5.0.2
+2019/05/06 19:43:32 [INFO] Aux information key:redis-bits value:64
+2019/05/06 19:43:32 [INFO] Aux information key:ctime value:1557142485
+2019/05/06 19:43:32 [INFO] Aux information key:used-mem value:2141712
+2019/05/06 19:43:32 [INFO] Aux information key:repl-stream-db value:0
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] Aux information key:repl-id value:70d8800c73899b619f42ef8a2999f94383aa847a
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] Aux information key:repl-offset value:96543
+2019/05/06 19:43:32 [INFO] Aux information key:aof-preamble value:0
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] db_size:5 expire_size:0
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] try to auth address[127.0.0.1:6383] with type[]
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] input password is empty, skip auth address[127.0.0.1:6383] with type[].
+2019/05/06 19:43:32 [INFO] auth OK!
+2019/05/06 19:43:32 [INFO] total = 251 -          251 [100%]  entry=5           
+2019/05/06 19:43:32 [INFO] restore: rdb done
+2019/05/06 19:43:32 [INFO] Enabled http stats, set status (incr), and wait forever.
+2019/05/06 19:44:12 [INFO] receive signal: interrupt
