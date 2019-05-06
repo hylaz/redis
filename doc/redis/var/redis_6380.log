@@ -1686,3 +1686,15 @@
 16034:S 06 May 2019 19:55:31.326 # Connection with replica 127.0.0.1:<unknown-replica-port> lost.
 16034:S 06 May 2019 19:55:35.452 - DB 0: 7 keys (0 volatile) in 8 slots HT.
 16034:S 06 May 2019 19:55:35.452 - 3 clients connected (0 replicas), 2090800 bytes in use
+16034:S 06 May 2019 19:55:40.510 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16034:S 06 May 2019 19:55:40.510 - 3 clients connected (0 replicas), 2090816 bytes in use
+16034:S 06 May 2019 19:55:45.578 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16034:S 06 May 2019 19:55:45.579 - 3 clients connected (0 replicas), 2090800 bytes in use
+16034:S 06 May 2019 19:55:50.641 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16034:S 06 May 2019 19:55:50.641 - 3 clients connected (0 replicas), 2090816 bytes in use
+16034:S 06 May 2019 19:55:55.704 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16034:S 06 May 2019 19:55:55.704 - 3 clients connected (0 replicas), 2090800 bytes in use
+16034:S 06 May 2019 19:56:00.782 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16034:S 06 May 2019 19:56:00.783 - 3 clients connected (0 replicas), 2090816 bytes in use
+16034:S 06 May 2019 19:56:05.845 - DB 0: 7 keys (0 volatile) in 8 slots HT.
+16034:S 06 May 2019 19:56:05.846 - 3 clients connected (0 replicas), 2090800 bytes in use
