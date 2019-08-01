@@ -43,6 +43,7 @@
  * Then logarithmically increment the counter, and update the access time. */
 
 void updateLFU(robj *val) {
+
     unsigned long counter = LFUDecrAndReturn(val);
     counter = LFULogIncr(counter);
     val->lru = (LFUGetTimeInMinutes()<<8) | counter;
@@ -225,7 +226,8 @@ int dbExists(redisDb *db, robj *key) {
 
 /* Return a random key, in form of a Redis object.
  * If there are no keys, NULL is returned.
- *
+ * 返回随机的key 
+ * 返回的key没有过期
  * The function makes sure to return keys not already expired. */
 robj *dbRandomKey(redisDb *db) {
     dictEntry *de;
@@ -367,6 +369,7 @@ long long emptyDb(int dbnum, int flags, void(callback)(void*)) {
             slotToKeyFlush();
         }
     }
+
     if (dbnum == -1) flushSlaveKeysWithExpireList();
     return removed;
 }
@@ -527,7 +530,10 @@ void randomkeyCommand(client *c) {
     addReplyBulk(c,key);
     decrRefCount(key);
 }
-
+/**
+ * keys命令
+ * 
+ */
 void keysCommand(client *c) {
     dictIterator *di;
     dictEntry *de;
@@ -832,7 +838,10 @@ void typeCommand(client *c) {
     }
     addReplyStatus(c,type);
 }
-
+/**
+ * 
+ * 关闭
+ */
 void shutdownCommand(client *c) {
     int flags = 0;
 
@@ -1101,6 +1110,7 @@ long long getExpire(redisDb *db, robj *key) {
  * When a key expires in the master, a DEL operation for this key is sent
  * to all the slaves and the AOF file if enabled.
  *
+ * 删除操作 发送命令到aof或者从服务器
  * This way the key expiry is centralized in one place, and since both
  * AOF and the master->slave link guarantee operation ordering, everything
  * will be consistent even if we allow write operations against expiring

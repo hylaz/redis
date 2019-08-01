@@ -291,6 +291,7 @@ sds sdsRemoveFreeSpace(sds s) {
  * 2) The string.
  * 3) The free buffer at the end if any.
  * 4) The implicit null term.
+ * 返回sds申请的内存
  */
 size_t sdsAllocSize(sds s) {
     size_t alloc = sdsalloc(s);

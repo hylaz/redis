@@ -37,7 +37,9 @@
 #endif
 
 /* ===================== Creation and parsing of objects ==================== */
-
+/**
+ * 创建object对象
+ */
 robj *createObject(int type, void *ptr) {
     robj *o = zmalloc(sizeof(*o));
     o->type = type;
@@ -277,13 +279,17 @@ robj *createModuleObject(moduleType *mt, void *value) {
     mv->value = value;
     return createObject(OBJ_MODULE,mv);
 }
-
+/**
+ * 释放string object
+ */
 void freeStringObject(robj *o) {
     if (o->encoding == OBJ_ENCODING_RAW) {
         sdsfree(o->ptr);
     }
 }
-
+/**
+ * 释放list object
+ */
 void freeListObject(robj *o) {
     if (o->encoding == OBJ_ENCODING_QUICKLIST) {
         quicklistRelease(o->ptr);
@@ -291,7 +297,9 @@ void freeListObject(robj *o) {
         serverPanic("Unknown list encoding type");
     }
 }
-
+/**
+ * 释放集合对象
+ */
 void freeSetObject(robj *o) {
     switch (o->encoding) {
     case OBJ_ENCODING_HT:
@@ -305,6 +313,9 @@ void freeSetObject(robj *o) {
     }
 }
 
+/**
+ * 释放有序集合对象
+ */
 void freeZsetObject(robj *o) {
     zset *zs;
     switch (o->encoding) {
@@ -322,6 +333,9 @@ void freeZsetObject(robj *o) {
     }
 }
 
+/**
+ * 释放hash对象
+ */
 void freeHashObject(robj *o) {
     switch (o->encoding) {
     case OBJ_ENCODING_HT:
@@ -336,6 +350,9 @@ void freeHashObject(robj *o) {
     }
 }
 
+/**
+ * 释放module对象
+ */
 void freeModuleObject(robj *o) {
     moduleValue *mv = o->ptr;
     mv->type->free(mv->value);
@@ -382,6 +399,7 @@ void decrRefCountVoid(void *o) {
  *
  *    functionThatWillIncrementRefCount(resetRefCount(CreateObject(...)));
  *
+ * 重置obj的引用计数
  * Otherwise you need to resort to the less elegant pattern:
  *
  *    *obj = createObject(...);
@@ -392,7 +410,9 @@ robj *resetRefCount(robj *obj) {
     obj->refcount = 0;
     return obj;
 }
-
+/**
+ * 检查obj的类型
+ */
 int checkType(client *c, robj *o, int type) {
     if (o->type != type) {
         addReply(c,shared.wrongtypeerr);
@@ -1282,7 +1302,7 @@ NULL
 
 /* The memory command will eventually be a complete interface for the
  * memory introspection capabilities of Redis.
- *
+ * 内存使用
  * Usage: MEMORY usage <key> */
 void memoryCommand(client *c) {
     robj *o;
@@ -1313,6 +1333,7 @@ void memoryCommand(client *c) {
         usage += sizeof(dictEntry);
         addReplyLongLong(c,usage);
     } else if (!strcasecmp(c->argv[1]->ptr,"stats") && c->argc == 2) {
+        //memory 统计内存信息
         struct redisMemOverhead *mh = getMemoryOverheadData();
 
         addReplyMultiBulkLen(c,(25+mh->num_dbs)*2);

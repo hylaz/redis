@@ -38,6 +38,7 @@ void initClientMultiState(client *c) {
 }
 
 /* Release all the resources associated with MULTI/EXEC state */
+
 void freeClientMultiState(client *c) {
     int j;
 
@@ -53,6 +54,9 @@ void freeClientMultiState(client *c) {
 }
 
 /* Add a new command into the MULTI commands queue */
+/**
+ * 添加命令到队列
+ */ 
 void queueMultiCommand(client *c) {
     multiCmd *mc;
     int j;
@@ -68,7 +72,10 @@ void queueMultiCommand(client *c) {
         incrRefCount(mc->argv[j]);
     c->mstate.count++;
 }
-
+/**
+ * 
+ * 取消事务
+ */ 
 void discardTransaction(client *c) {
     freeClientMultiState(c);
     initClientMultiState(c);
@@ -82,7 +89,9 @@ void flagTransaction(client *c) {
     if (c->flags & CLIENT_MULTI)
         c->flags |= CLIENT_DIRTY_EXEC;
 }
-
+/**
+ * multi命令
+ */ 
 void multiCommand(client *c) {
     if (c->flags & CLIENT_MULTI) {
         addReplyError(c,"MULTI calls can not be nested");
@@ -91,7 +100,9 @@ void multiCommand(client *c) {
     c->flags |= CLIENT_MULTI;
     addReply(c,shared.ok);
 }
-
+/**
+ * 取消multi命令
+ */ 
 void discardCommand(client *c) {
     if (!(c->flags & CLIENT_MULTI)) {
         addReplyError(c,"DISCARD without MULTI");
@@ -103,6 +114,9 @@ void discardCommand(client *c) {
 
 /* Send a MULTI command to all the slaves and AOF file. Check the execCommand
  * implementation for more information. */
+/**
+ * 针对aof或者主从复制
+ */ 
 void execCommandPropagateMulti(client *c) {
     robj *multistring = createStringObject("MULTI",5);
 
@@ -111,6 +125,9 @@ void execCommandPropagateMulti(client *c) {
     decrRefCount(multistring);
 }
 
+/**
+ * 执行命令
+ */ 
 void execCommand(client *c) {
     int j;
     robj **orig_argv;
