@@ -674,7 +674,9 @@ void sentinelGenerateInitialMonitorEvents(void) {
 
 /* ============================ script execution ============================ */
 
-/* Release a script job structure and all the associated data. */
+/**
+ * 释放脚本任务
+ *  Release a script job structure and all the associated data. */
 void sentinelReleaseScriptJob(sentinelScriptJob *sj) {
     int j = 0;
 
@@ -684,6 +686,9 @@ void sentinelReleaseScriptJob(sentinelScriptJob *sj) {
 }
 
 #define SENTINEL_SCRIPT_MAX_ARGS 16
+/**
+ * 执行脚本
+ */ 
 void sentinelScheduleScriptExecution(char *path, ...) {
     va_list ap;
     char *argv[SENTINEL_SCRIPT_MAX_ARGS+1];
@@ -746,7 +751,9 @@ listNode *sentinelGetScriptListNodeByPid(pid_t pid) {
     return NULL;
 }
 
-/* Run pending scripts if we are not already at max number of running
+/**
+ * 执行脚本
+ *  Run pending scripts if we are not already at max number of running
  * scripts. */
 void sentinelRunPendingScripts(void) {
     listNode *ln;
@@ -857,7 +864,9 @@ void sentinelCollectTerminatedScripts(void) {
     }
 }
 
-/* Kill scripts in timeout, they'll be collected by the
+/**
+ * 杀死超时的脚本
+ *  Kill scripts in timeout, they'll be collected by the
  * sentinelCollectTerminatedScripts() function. */
 void sentinelKillTimedoutScripts(void) {
     listNode *ln;
@@ -945,7 +954,9 @@ void sentinelCallClientReconfScript(sentinelRedisInstance *master, int role, cha
 
 /* =============================== instanceLink ============================= */
 
-/* Create a not yet connected link object. */
+/**
+ * 初始化连接实例
+ *  Create a not yet connected link object. */
 instanceLink *createInstanceLink(void) {
     instanceLink *link = zmalloc(sizeof(*link));
 
@@ -969,7 +980,9 @@ instanceLink *createInstanceLink(void) {
     return link;
 }
 
-/* Disconnect an hiredis connection in the context of an instance link. */
+/**
+ * 释放连接
+ * Disconnect an hiredis connection in the context of an instance link. */
 void instanceLinkCloseConnection(instanceLink *link, redisAsyncContext *c) {
     if (c == NULL) return;
 
@@ -1144,7 +1157,7 @@ void sentinelDisconnectCallback(const redisAsyncContext *c, int status) {
  * caller if needed:
  * runid: set to NULL but will be populated once INFO output is received.
  * info_refresh: is set to 0 to mean that we never received INFO so far.
- *
+ * 创建redis instance 实例
  * If SRI_MASTER is set into initial flags the instance is added to
  * sentinel.masters table.
  *
@@ -1196,7 +1209,7 @@ sentinelRedisInstance *createSentinelRedisInstance(char *name, int flags, char *
         return NULL;
     }
 
-    /* Create the instance object. */
+    /* Create the instance object. 创建redis instance  */
     ri = zmalloc(sizeof(*ri));
     /* Note that all the instances are started in the disconnected state,
      * the event loop will take care of connecting them. */
@@ -1284,7 +1297,7 @@ void releaseSentinelRedisInstance(sentinelRedisInstance *ri) {
     zfree(ri);
 }
 
-/* Lookup a slave in a master Redis instance, by ip and port. */
+/* Lookup a slave in a master Redis instance, by ip and port. 查找slave */
 sentinelRedisInstance *sentinelRedisInstanceLookupSlave(
                 sentinelRedisInstance *ri, char *ip, int port)
 {
@@ -1300,7 +1313,7 @@ sentinelRedisInstance *sentinelRedisInstanceLookupSlave(
     return slave;
 }
 
-/* Return the name of the type of the instance as a string. */
+/* Return the name of the type of the instance as a string. 获取instance类型*/
 const char *sentinelRedisInstanceTypeStr(sentinelRedisInstance *ri) {
     if (ri->flags & SRI_MASTER) return "master";
     else if (ri->flags & SRI_SLAVE) return "slave";
@@ -1310,7 +1323,7 @@ const char *sentinelRedisInstanceTypeStr(sentinelRedisInstance *ri) {
 
 /* This function remove the Sentinel with the specified ID from the
  * specified master.
- *
+ * master实例中移除指定的runid
  * If "runid" is NULL the function returns ASAP.
  *
  * This function is useful because on Sentinels address switch, we want to
@@ -1368,7 +1381,7 @@ sentinelRedisInstance *getSentinelRedisInstanceByAddrAndRunID(dict *instances, c
     return instance;
 }
 
-/* Master lookup by name */
+/* Master lookup by name 根据name查询master实例 */
 sentinelRedisInstance *sentinelGetMasterByName(char *name) {
     sentinelRedisInstance *ri;
     sds sdsname = sdsnew(name);
@@ -1378,7 +1391,7 @@ sentinelRedisInstance *sentinelGetMasterByName(char *name) {
     return ri;
 }
 
-/* Add the specified flags to all the instances in the specified dictionary. */
+/* Add the specified flags to all the instances in the specified dictionary. 设置实例的标志 */
 void sentinelAddFlagsToDictOfRedisInstances(dict *instances, int flags) {
     dictIterator *di;
     dictEntry *de;

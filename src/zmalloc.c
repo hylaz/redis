@@ -212,7 +212,9 @@ char *zstrdup(const char *s) {
     memcpy(p,s,l);
     return p;
 }
-
+/**
+ * 获取申请的内存
+ */
 size_t zmalloc_used_memory(void) {
     size_t um;
     atomicGet(used_memory,um);

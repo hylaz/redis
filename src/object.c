@@ -544,7 +544,9 @@ robj *getDecodedObject(robj *o) {
 
 #define REDIS_COMPARE_BINARY (1<<0)
 #define REDIS_COMPARE_COLL (1<<1)
-
+/**
+ * 比较两个对象
+ */
 int compareStringObjectsWithFlags(robj *a, robj *b, int flags) {
     serverAssertWithInfo(NULL,a,a->type == OBJ_STRING && b->type == OBJ_STRING);
     char bufa[128], bufb[128], *astr, *bstr;
@@ -601,7 +603,9 @@ int equalStringObjects(robj *a, robj *b) {
         return compareStringObjects(a,b) == 0;
     }
 }
-
+/**
+ * 获取字符串对象的长度
+ */
 size_t stringObjectLen(robj *o) {
     serverAssertWithInfo(NULL,o,o->type == OBJ_STRING);
     if (sdsEncodedObject(o)) {
@@ -771,7 +775,7 @@ char *strEncoding(int encoding) {
  * was obtained by checking the average radix tree created by real
  * workloads, and then adjusting the constants to get numbers that
  * more or less match the real memory usage.
- *
+ * 获取rax的内存
  * Actually the number of nodes and keys may be different depending
  * on the insertion speed and thus the ability of the radix tree
  * to compress prefixes. */
@@ -952,6 +956,9 @@ size_t objectComputeSize(robj *o, size_t sample_size) {
 }
 
 /* Release data obtained with getMemoryOverheadData(). */
+/**
+ * 释放redisMemOverhead 
+ */
 void freeMemoryOverheadData(struct redisMemOverhead *mh) {
     zfree(mh->db);
     zfree(mh);

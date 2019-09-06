@@ -1,7 +1,7 @@
 # Sentinel test suite. Copyright (C) 2014 Salvatore Sanfilippo antirez@gmail.com
 # This software is released under the BSD License. See the COPYING file for
 # more information.
-
+# 哨兵模式的监控
 cd tests/sentinel
 source ../instances.tcl
 
