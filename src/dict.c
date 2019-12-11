@@ -782,7 +782,7 @@ static unsigned long rev(unsigned long v) {
 }
 
 /* dictScan() is used to iterate over the elements of a dictionary.
- *
+ * dictScan函数实现
  * Iterating works the following way:
  *
  * 1) Initially you call the function using a cursor (v) value of 0.
@@ -874,9 +874,10 @@ unsigned long dictScan(dict *d,
     dictht *t0, *t1;
     const dictEntry *de, *next;
     unsigned long m0, m1;
-
+    //字典大小为0
     if (dictSize(d) == 0) return 0;
 
+    //字典不在进行rehash
     if (!dictIsRehashing(d)) {
         t0 = &(d->ht[0]);
         m0 = t0->sizemask;
@@ -892,17 +893,22 @@ unsigned long dictScan(dict *d,
 
         /* Set unmasked bits so incrementing the reversed cursor
          * operates on the masked bits */
+        // 将游标的umask位的bit都置为1
         v |= ~m0;
-
         /* Increment the reverse cursor */
+        // 反转游标
         v = rev(v);
+        // 反转后+1，达到高位加1的效果
         v++;
+        // 再次反转复位
         v = rev(v);
 
-    } else {
+    } else { //正在进行rehash
+
         t0 = &d->ht[0];
         t1 = &d->ht[1];
-
+        //redis里rehash从小到大时，SCAN命令不会重复也不会遗漏。
+        //而从大到小时，有可能会造成重复但不会遗漏
         /* Make sure t0 is the smaller and t1 is the bigger table */
         if (t0->size > t1->size) {
             t0 = &d->ht[1];
@@ -913,6 +919,7 @@ unsigned long dictScan(dict *d,
         m1 = t1->sizemask;
 
         /* Emit entries at cursor */
+        
         if (bucketfn) bucketfn(privdata, &t0->table[v & m0]);
         de = t0->table[v & m0];
         while (de) {

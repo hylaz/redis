@@ -527,6 +527,7 @@ sds catAppendOnlyExpireAtCommand(sds buf, struct redisCommand *cmd, robj *key, r
     robj *argv[3];
 
     /* Make sure we can use strtoll */
+    //时间转化成秒
     seconds = getDecodedObject(seconds);
     when = strtoll(seconds->ptr,NULL,10);
     /* Convert argument into milliseconds for EXPIRE, SETEX, EXPIREAT */
@@ -551,7 +552,10 @@ sds catAppendOnlyExpireAtCommand(sds buf, struct redisCommand *cmd, robj *key, r
     decrRefCount(argv[2]);
     return buf;
 }
-
+/**
+ * 把命令追加到文件中
+ * 
+ */ 
 void feedAppendOnlyFile(struct redisCommand *cmd, int dictid, robj **argv, int argc) {
     sds buf = sdsempty();
     robj *tmpargv[3];
@@ -604,7 +608,9 @@ void feedAppendOnlyFile(struct redisCommand *cmd, int dictid, robj **argv, int a
 
     /* Append to the AOF buffer. This will be flushed on disk just before
      * of re-entering the event loop, so before the client will get a
+     * 追加到aof buf中
      * positive reply about the operation performed. */
+    
     if (server.aof_state == AOF_ON)
         server.aof_buf = sdscatlen(server.aof_buf,buf,sdslen(buf));
 
@@ -650,7 +656,9 @@ struct client *createFakeClient(void) {
     initClientMultiState(c);
     return c;
 }
-
+/**
+ * 释放客户端参数
+ */ 
 void freeFakeClientArgv(struct client *c) {
     int j;
 
@@ -658,7 +666,9 @@ void freeFakeClientArgv(struct client *c) {
         decrRefCount(c->argv[j]);
     zfree(c->argv);
 }
-
+/**
+ * 释放客户端
+ */ 
 void freeFakeClient(struct client *c) {
     sdsfree(c->querybuf);
     listRelease(c->reply);
@@ -855,7 +865,7 @@ fmterr: /* Format error. */
 }
 
 /* ----------------------------------------------------------------------------
- * AOF rewrite
+ * AOF rewrite aof重现
  * ------------------------------------------------------------------------- */
 
 /* Delegate writing an object to writing a bulk string or bulk long long.

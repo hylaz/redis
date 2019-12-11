@@ -1353,6 +1353,7 @@ int serverCron(struct aeEventLoop *eventLoop, long long id, void *clientData) {
 
 /* This function gets called every time Redis is entering the
  * main loop of the event driven library, that is, before to sleep
+ * 设置循环前函数
  * for ready file descriptors. */
 void beforeSleep(struct aeEventLoop *eventLoop) {
     UNUSED(eventLoop);
@@ -1513,6 +1514,9 @@ void createSharedObjects(void) {
     shared.maxstring = sdsnew("maxstring");
 }
 
+/**
+ * 初始化默认的server config
+ */
 void initServerConfig(void) {
     int j;
 
@@ -2003,6 +2007,9 @@ void resetServerStats(void) {
     server.aof_delayed_fsync = 0;
 }
 
+/**
+ * 初始化server
+ */ 
 void initServer(void) {
     int j;
 
@@ -2166,7 +2173,7 @@ void initServer(void) {
     }
 
     if (server.cluster_enabled) clusterInit();
-    replicationScriptCacheInit();
+    replicationScriptCacheInit(); //复制
     scriptingInit(1);
     slowlogInit();
     latencyMonitorInit();
@@ -2212,7 +2219,7 @@ void populateCommandTable(void) {
         serverAssert(retval1 == DICT_OK && retval2 == DICT_OK);
     }
 }
-
+//重置命令数组
 void resetCommandTableStats(void) {
     struct redisCommand *c;
     dictEntry *de;
@@ -2308,8 +2315,10 @@ struct redisCommand *lookupCommandOrOriginal(sds name) {
 void propagate(struct redisCommand *cmd, int dbid, robj **argv, int argc,
                int flags)
 {
+    //追加到aof
     if (server.aof_state != AOF_OFF && flags & PROPAGATE_AOF)
         feedAppendOnlyFile(cmd,dbid,argv,argc);
+    //追加到复制
     if (flags & PROPAGATE_REPL)
         replicationFeedSlaves(server.slaves,dbid,argv,argc);
 }
@@ -2423,7 +2432,7 @@ void call(client *c, int flags) {
     redisOpArray prev_also_propagate = server.also_propagate;
     redisOpArrayInit(&server.also_propagate);
 
-    /* Call the command. */
+    /* Call the command. 执行命令 */
     dirty = server.dirty;
     start = ustime();
     c->cmd->proc(c);
@@ -2525,7 +2534,7 @@ void call(client *c, int flags) {
  * command, arguments are in the client argv/argc fields.
  * processCommand() execute the command or prepare the
  * server for a bulk read from the client.
- *
+ * 处理命令
  * If C_OK is returned the client is still alive and valid and
  * other operations can be performed by the caller. Otherwise
  * if C_ERR is returned the client was destroyed (i.e. after QUIT). */
@@ -2561,7 +2570,7 @@ int processCommand(client *c) {
         return C_OK;
     }
 
-    /* Check if the user is authenticated */
+    /* Check if the user is authenticated 是否认证 */
     if (server.requirepass && !c->authenticated && c->cmd->proc != authCommand)
     {
         flagTransaction(c);
@@ -2596,7 +2605,7 @@ int processCommand(client *c) {
     }
 
     /* Handle the maxmemory directive.
-     *
+     * 针对内存处理
      * First we try to free some memory if possible (if there are volatile
      * keys in the dataset). If there are not the only thing we can do
      * is returning an error.
@@ -2727,7 +2736,7 @@ int processCommand(client *c) {
 /*================================== Shutdown =============================== */
 
 /* Close listening sockets. Also unlink the unix domain socket if
- * unlink_unix_socket is non-zero. */
+ * unlink_unix_socket is non-zero. 关闭监听的socket */
 void closeListeningSockets(int unlink_unix_socket) {
     int j;
 
@@ -2740,7 +2749,7 @@ void closeListeningSockets(int unlink_unix_socket) {
         unlink(server.unixsocket); /* don't care if this fails */
     }
 }
-
+//关闭服务
 int prepareForShutdown(int flags) {
     int save = flags & SHUTDOWN_SAVE;
     int nosave = flags & SHUTDOWN_NOSAVE;
@@ -2779,7 +2788,7 @@ int prepareForShutdown(int flags) {
         redis_fsync(server.aof_fd);
     }
 
-    /* Create a new RDB file before exiting. */
+    /* Create a new RDB file before exiting. 创建新的rdb文件  */
     if ((server.saveparamslen > 0 && !nosave) || save) {
         serverLog(LL_NOTICE,"Saving the final RDB snapshot before exiting.");
         /* Snapshotting. Perform a SYNC SAVE and exit */
@@ -2882,7 +2891,7 @@ int time_independent_strcmp(char *a, char *b) {
     diff |= alen ^ blen;
     return diff; /* If zero strings are the same. */
 }
-
+//验证
 void authCommand(client *c) {
     if (!server.requirepass) {
         addReplyError(c,"Client sent AUTH, but no password is set");
@@ -2919,7 +2928,7 @@ void pingCommand(client *c) {
             addReplyBulk(c,c->argv[1]);
     }
 }
-
+//echo 命令
 void echoCommand(client *c) {
     addReplyBulk(c,c->argv[1]);
 }
@@ -3676,6 +3685,7 @@ void linuxMemoryWarnings(void) {
 }
 #endif /* __linux__ */
 
+//创建pid文件
 void createPidFile(void) {
     /* If pidfile requested, but no pidfile defined, use
      * default pidfile path */
@@ -3689,6 +3699,9 @@ void createPidFile(void) {
     }
 }
 
+/**
+ * 设置为后台进程
+ */ 
 void daemonize(void) {
     int fd;
 
@@ -3800,6 +3813,7 @@ static void sigShutdownHandler(int sig) {
     server.shutdown_asap = 1;
 }
 
+//信号方面的
 void setupSignalHandlers(void) {
     struct sigaction act;
 
@@ -3826,7 +3840,7 @@ void setupSignalHandlers(void) {
 void memtest(size_t megabytes, int passes);
 
 /* Returns 1 if there is --sentinel among the arguments or if
- * argv[0] contains "redis-sentinel". */
+ * argv[0] contains "redis-sentinel". 检查是否是sentinel配置 */
 int checkForSentinelMode(int argc, char **argv) {
     int j;
 
@@ -3836,7 +3850,7 @@ int checkForSentinelMode(int argc, char **argv) {
     return 0;
 }
 
-/* Function called at startup to load RDB or AOF file in memory. */
+/* Function called at startup to load RDB or AOF file in memory. 加载数据到硬盘 */
 void loadDataFromDisk(void) {
     long long start = ustime();
     if (server.aof_state == AOF_ON) {
@@ -3877,7 +3891,7 @@ void redisOutOfMemoryHandler(size_t allocation_size) {
         allocation_size);
     serverPanic("Redis aborting for OUT OF MEMORY");
 }
-
+//设置进程的名字
 void redisSetProcTitle(char *title) {
 #ifdef USE_SETPROCTITLE
     char *server_mode = "";
@@ -4024,7 +4038,8 @@ int main(int argc, char **argv) {
 #ifdef INIT_SETPROCTITLE_REPLACEMENT
     spt_init(argc, argv);
 #endif
-    setlocale(LC_COLLATE,"");
+
+    setlocale(LC_COLLATE,""); //初始化本地
     tzset(); /* Populates 'timezone' global. */
     zmalloc_set_oom_handler(redisOutOfMemoryHandler);
     srand(time(NULL)^getpid());
@@ -4126,7 +4141,7 @@ int main(int argc, char **argv) {
         loadServerConfig(configfile,options);
         sdsfree(options);
     }
-
+    //日志打印
     serverLog(LL_WARNING, "oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo");
     serverLog(LL_WARNING,
         "Redis version=%s, bits=%d, commit=%s, modified=%d, pid=%d, just started",

@@ -576,6 +576,7 @@ int rdbSaveDoubleValue(rio *rdb, double val) {
 }
 
 /* For information about double serialization check rdbSaveDoubleValue() */
+// 读取double类型数据
 int rdbLoadDoubleValue(rio *rdb, double *val) {
     char buf[256];
     unsigned char len;
@@ -668,7 +669,8 @@ int rdbSaveObjectType(rio *rdb, robj *o) {
     return -1; /* avoid warning */
 }
 
-/* Use rdbLoadType() to load a TYPE in RDB format, but returns -1 if the
+/** Use rdbLoadType() to load a TYPE in RDB format, but returns -1 if the
+ * 加载类型
  * type is not specifically a valid Object Type. */
 int rdbLoadObjectType(rio *rdb) {
     int type;
@@ -717,7 +719,8 @@ ssize_t rdbSaveStreamPEL(rio *rdb, rax *pel, int nacks) {
     return nwritten;
 }
 
-/* Serialize the consumers of a stream consumer group into the RDB. Helper
+/** Serialize the consumers of a stream consumer group into the RDB. Helper
+ * 保存stream中消费者
  * function for the stream data type serialization. What we do here is to
  * persist the consumer metadata, and it's PEL, for each consumer. */
 size_t rdbSaveStreamConsumers(rio *rdb, streamCG *cg) {
@@ -792,7 +795,7 @@ ssize_t rdbSaveObject(rio *rdb, robj *o) {
             serverPanic("Unknown list encoding");
         }
     } else if (o->type == OBJ_SET) {
-        /* Save a set value */
+        /* Save a set value 集合 */
         if (o->encoding == OBJ_ENCODING_HT) {
             dict *set = o->ptr;
             dictIterator *di = dictGetIterator(set);
@@ -824,7 +827,7 @@ ssize_t rdbSaveObject(rio *rdb, robj *o) {
             serverPanic("Unknown set encoding");
         }
     } else if (o->type == OBJ_ZSET) {
-        /* Save a sorted set value */
+        /* Save a sorted set value 有序列表 */
         if (o->encoding == OBJ_ENCODING_ZIPLIST) {
             size_t l = ziplistBlobLen((unsigned char*)o->ptr);
 
@@ -860,7 +863,7 @@ ssize_t rdbSaveObject(rio *rdb, robj *o) {
             serverPanic("Unknown sorted set encoding");
         }
     } else if (o->type == OBJ_HASH) {
-        /* Save a hash value */
+        /* Save a hash value HASH集合 */
         if (o->encoding == OBJ_ENCODING_ZIPLIST) {
             size_t l = ziplistBlobLen((unsigned char*)o->ptr);
 
@@ -1010,7 +1013,8 @@ size_t rdbSavedObjectLen(robj *o) {
     return len;
 }
 
-/* Save a key-value pair, with expire time, type, key, value.
+/** Save a key-value pair, with expire time, type, key, value.
+ * 保存键值对
  * On error -1 is returned.
  * On success if the key was actually saved 1 is returned, otherwise 0
  * is returned (the key was already expired). */
@@ -1224,7 +1228,7 @@ werr: /* Write error. */
     return C_ERR;
 }
 
-/* Save the DB on disk. Return C_ERR on error, C_OK on success. */
+/* Save the DB on disk. Return C_ERR on error, C_OK on success. 保存rdb文件到硬盘 */
 int rdbSave(char *filename, rdbSaveInfo *rsi) {
     char tmpfile[256];
     char cwd[MAXPATHLEN]; /* Current working dir path for error messages. */
@@ -1261,7 +1265,7 @@ int rdbSave(char *filename, rdbSaveInfo *rsi) {
     if (fclose(fp) == EOF) goto werr;
 
     /* Use RENAME to make sure the DB file is changed atomically only
-     * if the generate DB file is ok. */
+     * if the generate DB file is ok. 重命名文件*/
     if (rename(tmpfile,filename) == -1) {
         char *cwdp = getcwd(cwd,MAXPATHLEN);
         serverLog(LL_WARNING,
@@ -1276,6 +1280,7 @@ int rdbSave(char *filename, rdbSaveInfo *rsi) {
     }
 
     serverLog(LL_NOTICE,"DB saved on disk");
+    //更新键值对变化数量 最新保存时间 保存状态
     server.dirty = 0;
     server.lastsave = time(NULL);
     server.lastbgsave_status = C_OK;
@@ -1287,7 +1292,7 @@ werr:
     unlink(tmpfile);
     return C_ERR;
 }
-
+//后台保存rdb文件
 int rdbSaveBackground(char *filename, rdbSaveInfo *rsi) {
     pid_t childpid;
     long long start;
@@ -1340,7 +1345,7 @@ int rdbSaveBackground(char *filename, rdbSaveInfo *rsi) {
     }
     return C_OK; /* unreached */
 }
-
+// 移除临时文件
 void rdbRemoveTempFile(pid_t childpid) {
     char tmpfile[256];
 
@@ -1804,7 +1809,8 @@ robj *rdbLoadObject(int rdbtype, rio *rdb) {
     return o;
 }
 
-/* Mark that we are loading in the global state and setup the fields
+/**  Mark that we are loading in the global state and setup the fields
+ * 开始加载持久化
  * needed to provide loading stats. */
 void startLoading(FILE *fp) {
     struct stat sb;
@@ -1820,14 +1826,14 @@ void startLoading(FILE *fp) {
     }
 }
 
-/* Refresh the loading progress info */
+/* Refresh the loading progress info 刷新加载进度 */
 void loadingProgress(off_t pos) {
     server.loading_loaded_bytes = pos;
     if (server.stat_peak_memory < zmalloc_used_memory())
         server.stat_peak_memory = zmalloc_used_memory();
 }
 
-/* Loading finished */
+/* Loading finished  加载文件结束*/
 void stopLoading(void) {
     server.loading = 0;
 }

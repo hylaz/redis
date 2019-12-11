@@ -298,7 +298,7 @@ fmterr:
 }
 
 /* Cluster node configuration is exactly the same as CLUSTER NODES output.
- *
+ * 保存配置信息
  * This function writes the node config and returns 0, on error -1
  * is returned.
  *

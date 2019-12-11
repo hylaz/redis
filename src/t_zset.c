@@ -3112,6 +3112,7 @@ void zrevrankCommand(client *c) {
     zrankGenericCommand(c, 1);
 }
 
+// zcan命令
 void zscanCommand(client *c) {
     robj *o;
     unsigned long cursor;

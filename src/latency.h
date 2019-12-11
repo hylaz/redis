@@ -50,7 +50,7 @@ struct latencyTimeSeries {
     struct latencySample samples[LATENCY_TS_LEN]; /* Latest history. */
 };
 
-/* Latency statistics structure. */
+/* Latency statistics structure. 监控统计实例 */
 struct latencyStats {
     uint32_t all_time_high; /* Absolute max observed since latest reset. */
     uint32_t avg;           /* Average of current samples. */
@@ -67,20 +67,21 @@ int THPIsEnabled(void);
 
 /* Latency monitoring macros. */
 
-/* Start monitoring an event. We just set the current time. */
+/* Start monitoring an event. We just set the current time. 开始当前的监控*/
 #define latencyStartMonitor(var) if (server.latency_monitor_threshold) { \
     var = mstime(); \
 } else { \
     var = 0; \
 }
 
-/* End monitoring an event, compute the difference with the current time
+/** End monitoring an event, compute the difference with the current time
+ * 结束当前的监控
  * to check the amount of time elapsed. */
 #define latencyEndMonitor(var) if (server.latency_monitor_threshold) { \
     var = mstime() - var; \
 }
 
-/* Add the sample only if the elapsed time is >= to the configured threshold. */
+/* Add the sample only if the elapsed time is >= to the configured threshold. 增加记录 */
 #define latencyAddSampleIfNeeded(event,var) \
     if (server.latency_monitor_threshold && \
         (var) >= server.latency_monitor_threshold) \

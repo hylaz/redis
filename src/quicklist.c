@@ -70,7 +70,7 @@ static const size_t optimization_level[] = {4096, 8192, 16384, 32768, 65536};
     } while (0);
 #endif
 
-/* Simple way to give quicklistEntry structs default values with one call. */
+/* Simple way to give quicklistEntry structs default values with one call. 初始化结构体*/
 #define initEntry(e)                                                           \
     do {                                                                       \
         (e)->zi = (e)->value = NULL;                                           \
@@ -89,7 +89,8 @@ static const size_t optimization_level[] = {4096, 8192, 16384, 32768, 65536};
 #define unlikely(x) (x)
 #endif
 
-/* Create a new quicklist.
+/** Create a new quicklist.
+ * 创建快速列表
  * Free with quicklistRelease(). */
 quicklist *quicklistCreate(void) {
     struct quicklist *quicklist;
@@ -104,6 +105,9 @@ quicklist *quicklistCreate(void) {
 }
 
 #define COMPRESS_MAX (1 << 16)
+/**
+ * 设置压缩比例
+ */ 
 void quicklistSetCompressDepth(quicklist *quicklist, int compress) {
     if (compress > COMPRESS_MAX) {
         compress = COMPRESS_MAX;
@@ -114,6 +118,9 @@ void quicklistSetCompressDepth(quicklist *quicklist, int compress) {
 }
 
 #define FILL_MAX (1 << 15)
+/**
+ * 设置fill
+ */ 
 void quicklistSetFill(quicklist *quicklist, int fill) {
     if (fill > FILL_MAX) {
         fill = FILL_MAX;
@@ -122,19 +129,28 @@ void quicklistSetFill(quicklist *quicklist, int fill) {
     }
     quicklist->fill = fill;
 }
-
+/**
+ * 设置选项
+ */ 
 void quicklistSetOptions(quicklist *quicklist, int fill, int depth) {
     quicklistSetFill(quicklist, fill);
     quicklistSetCompressDepth(quicklist, depth);
 }
 
-/* Create a new quicklist with some default parameters. */
+/**
+ * 创建新的quicklist
+ *  Create a new quicklist with some default parameters. 
+ **/
+
 quicklist *quicklistNew(int fill, int compress) {
     quicklist *quicklist = quicklistCreate();
     quicklistSetOptions(quicklist, fill, compress);
     return quicklist;
 }
 
+/**
+ * 创建一个节点
+ */ 
 REDIS_STATIC quicklistNode *quicklistCreateNode(void) {
     quicklistNode *node;
     node = zmalloc(sizeof(*node));
@@ -151,7 +167,9 @@ REDIS_STATIC quicklistNode *quicklistCreateNode(void) {
 /* Return cached quicklist count */
 unsigned long quicklistCount(const quicklist *ql) { return ql->count; }
 
-/* Free entire quicklist. */
+/**
+ * 释放quicklist
+ *  Free entire quicklist. */
 void quicklistRelease(quicklist *quicklist) {
     unsigned long len;
     quicklistNode *current, *next;
@@ -346,6 +364,9 @@ REDIS_STATIC void __quicklistCompress(const quicklist *quicklist,
     } while (0)
 
 /* Insert 'new_node' after 'old_node' if 'after' is 1.
+ * 插入指定node到quicklist中
+ * 当after为1 在old_node后面
+ * 当after为0 在old_node前面   
  * Insert 'new_node' before 'old_node' if 'after' is 0.
  * Note: 'new_node' is *always* uncompressed, so if we assign it to
  *       head or tail, we do not need to uncompress it. */
@@ -374,6 +395,7 @@ REDIS_STATIC void __quicklistInsertNode(quicklist *quicklist,
             quicklist->head = new_node;
     }
     /* If this insert creates the only element so far, initialize head/tail. */
+    // 如果列表为空 
     if (quicklist->len == 0) {
         quicklist->head = quicklist->tail = new_node;
     }

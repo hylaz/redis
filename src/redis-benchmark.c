@@ -313,15 +313,15 @@ static void writeHandler(aeEventLoop *el, int fd, void *privdata, int mask) {
 
 /* Create a benchmark client, configured to send the command passed as 'cmd' of
  * 'len' bytes.
- *
+ * 创建压测的客户端
  * The command is copied N times in the client output buffer (that is reused
  * again and again to send the request to the server) accordingly to the configured
  * pipeline size.
- *
+ * 
  * Also an initial SELECT command is prepended in order to make sure the right
  * database is selected, if needed. The initial SELECT will be discarded as soon
  * as the first reply is received.
- *
+ * 
  * To create a client from scratch, the 'from' pointer is set to NULL. If instead
  * we want to create a client using another client as reference, the 'from' pointer
  * points to the client to use as reference. In such a case the following
@@ -428,7 +428,9 @@ static client createClient(char *cmd, size_t len, client from) {
     config.liveclients++;
     return c;
 }
-
+/**
+ * 创建无效客户端
+ */
 static void createMissingClients(client c) {
     int n = 0;
 
@@ -442,7 +444,9 @@ static void createMissingClients(client c) {
         }
     }
 }
-
+/**
+ * 比较两个数字大小
+ */ 
 static int compareLatency(const void *a, const void *b) {
     return (*(long long*)a)-(*(long long*)b);
 }

@@ -86,6 +86,7 @@ int THPGetAnonHugePagesSize(void) {
 
 /* Latency monitor initialization. We just need to create the dictionary
  * of time series, each time serie is craeted on demand in order to avoid
+ * 初始化监控事件
  * having a fixed list to maintain. */
 void latencyMonitorInit(void) {
     server.latency_events = dictCreate(&latencyTimeSeriesDictType,NULL);
@@ -129,7 +130,7 @@ void latencyAddSample(char *event, mstime_t latency) {
 
 /* Reset data for the specified event, or all the events data if 'event' is
  * NULL.
- *
+ * 重置监控事件
  * Note: this is O(N) even when event_to_reset is not NULL because makes
  * the code simpler and we have a small fixed max number of events. */
 int latencyResetEvent(char *event_to_reset) {
@@ -213,7 +214,7 @@ void analyzeLatencyForEvent(char *event, struct latencyStats *ls) {
     if (ls->samples) ls->mad = sum / ls->samples;
 }
 
-/* Create a human readable report of latency events for this Redis instance. */
+/* Create a human readable report of latency events for this Redis instance. 创建latency 事件 */
 sds createLatencyReport(void) {
     sds report = sdsempty();
     int advise_better_vm = 0;       /* Better virtual machines. */

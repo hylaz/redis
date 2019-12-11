@@ -38,14 +38,16 @@
  * C-level DB API
  *----------------------------------------------------------------------------*/
 
-/* Update LFU when an object is accessed.
+/** Update LFU when an object is accessed.
+ * 更新lfu
  * Firstly, decrement the counter if the decrement time is reached.
  * Then logarithmically increment the counter, and update the access time. */
-
 void updateLFU(robj *val) {
-
+    //counter进行减少操作
     unsigned long counter = LFUDecrAndReturn(val);
+    //增长LFULogIncr
     counter = LFULogIncr(counter);
+    //是指lru值
     val->lru = (LFUGetTimeInMinutes()<<8) | counter;
 }
 
@@ -562,7 +564,9 @@ void keysCommand(client *c) {
 }
 
 /* This callback is used by scanGenericCommand in order to collect elements
- * returned by the dictionary iterator into a list. */
+ * returned by the dictionary iterator into a list.
+ * 迭代后处理数据
+ **/
 void scanCallback(void *privdata, const dictEntry *de) {
     void **pd = (void**) privdata;
     list *keys = pd[0];
@@ -595,7 +599,9 @@ void scanCallback(void *privdata, const dictEntry *de) {
 /* Try to parse a SCAN cursor stored at object 'o':
  * if the cursor is valid, store it as unsigned integer into *cursor and
  * returns C_OK. Otherwise return C_ERR and send an error to the
- * client. */
+ * client.
+ * 获取游标的值
+ */
 int parseScanCursorOrReply(client *c, robj *o, unsigned long *cursor) {
     char *eptr;
 
@@ -611,7 +617,7 @@ int parseScanCursorOrReply(client *c, robj *o, unsigned long *cursor) {
     return C_OK;
 }
 
-/* This command implements SCAN, HSCAN and SSCAN commands.
+/* This command implements SCAN,HSCAN,SSCAN and ,ZSCAN commands.
  * If object 'o' is passed, then it must be a Hash or Set object, otherwise
  * if 'o' is NULL the command will operate on the dictionary associated with
  * the current database.
@@ -642,6 +648,7 @@ void scanGenericCommand(client *c, robj *o, unsigned long cursor) {
     /* Step 1: Parse options. */
     while (i < c->argc) {
         j = c->argc - i;
+        //获取count参数
         if (!strcasecmp(c->argv[i]->ptr, "count") && j >= 2) {
             if (getLongFromObjectOrReply(c, c->argv[i+1], &count, NULL)
                 != C_OK)
@@ -712,6 +719,7 @@ void scanGenericCommand(client *c, robj *o, unsigned long cursor) {
               maxiterations-- &&
               listLength(keys) < (unsigned long)count);
     } else if (o->type == OBJ_SET) {
+        //数据类型是集合 encoding是intset场景
         int pos = 0;
         int64_t ll;
 
@@ -719,6 +727,7 @@ void scanGenericCommand(client *c, robj *o, unsigned long cursor) {
             listAddNodeTail(keys,createStringObjectFromLongLong(ll));
         cursor = 0;
     } else if (o->type == OBJ_HASH || o->type == OBJ_ZSET) {
+        //对象是压缩列表
         unsigned char *p = ziplistIndex(o->ptr,0);
         unsigned char *vstr;
         unsigned int vlen;
@@ -736,7 +745,7 @@ void scanGenericCommand(client *c, robj *o, unsigned long cursor) {
         serverPanic("Not handled encoding in SCAN.");
     }
 
-    /* Step 3: Filter elements. */
+    /* Step 3: Filter elements. 过滤元素 */
     node = listFirst(keys);
     while (node) {
         robj *kobj = listNodeValue(node);
@@ -799,7 +808,10 @@ cleanup:
     listRelease(keys);
 }
 
-/* The SCAN command completely relies on scanGenericCommand. */
+/**
+ * 
+ * The SCAN command completely relies on scanGenericCommand.
+ */
 void scanCommand(client *c) {
     unsigned long cursor;
     if (parseScanCursorOrReply(c,c->argv[1],&cursor) == C_ERR) return;

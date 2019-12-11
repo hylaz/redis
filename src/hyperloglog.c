@@ -896,7 +896,7 @@ promote: /* Promote to dense representation. */
 /* "Add" the element in the sparse hyperloglog data structure.
  * Actually nothing is added, but the max 0 pattern counter of the subset
  * the element belongs to is incremented if needed.
- *
+ * 添加到元素到稀疏基数
  * This function is actually a wrapper for hllSparseSet(), it only performs
  * the hashshing of the elmenet to obtain the index and zeros run length. */
 int hllSparseAdd(robj *o, unsigned char *ele, size_t elesize) {
@@ -1041,7 +1041,10 @@ uint64_t hllCount(struct hllhdr *hdr, int *invalid) {
     return (uint64_t) E;
 }
 
-/* Call hllDenseAdd() or hllSparseAdd() according to the HLL encoding. */
+/**
+ * 添加指定ele到hll对象
+ * Call hllDenseAdd() or hllSparseAdd() according to the HLL encoding. 
+ */
 int hllAdd(robj *o, unsigned char *ele, size_t elesize) {
     struct hllhdr *hdr = o->ptr;
     switch(hdr->encoding) {
@@ -1136,17 +1139,20 @@ robj *createHLLObject(void) {
     return o;
 }
 
-/* Check if the object is a String with a valid HLL representation.
+/** Check if the object is a String with a valid HLL representation.
+ * 检查是否hll结构体
  * Return C_OK if this is true, otherwise reply to the client
  * with an error and return C_ERR. */
 int isHLLObjectOrReply(client *c, robj *o) {
     struct hllhdr *hdr;
 
     /* Key exists, check type */
+    // 检查是否是字符串
     if (checkType(c,o,OBJ_STRING))
         return C_ERR; /* Error already sent. */
-
+    //
     if (!sdsEncodedObject(o)) goto invalid;
+    //获取字符串长度是否满足hll
     if (stringObjectLen(o) < sizeof(*hdr)) goto invalid;
     hdr = o->ptr;
 
@@ -1171,6 +1177,9 @@ invalid:
 }
 
 /* PFADD var ele ele ele ... ele => :0 or :1 */
+/**
+ * 添加元素到key中
+ */ 
 void pfaddCommand(client *c) {
     robj *o = lookupKeyWrite(c->db,c->argv[1]);
     struct hllhdr *hdr;
@@ -1184,6 +1193,7 @@ void pfaddCommand(client *c) {
         dbAdd(c->db,c->argv[1],o);
         updated++;
     } else {
+        //是否是hll结构
         if (isHLLObjectOrReply(c,o) != C_OK) return;
         o = dbUnshareStringValue(c->db,c->argv[1],o);
     }

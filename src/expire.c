@@ -48,12 +48,12 @@
  * 1 is returned. Otherwise no operation is performed and 0 is returned.
  *
  * When a key is expired, server.stat_expiredkeys is incremented.
- *
+ * 当一个key过期 增加stat_exporedkeys数量
  * The parameter 'now' is the current time in milliseconds as is passed
  * to the function to avoid too many gettimeofday() syscalls. */
 int activeExpireCycleTryExpire(redisDb *db, dictEntry *de, long long now) {
     long long t = dictGetSignedIntegerVal(de);
-    if (now > t) {
+    if (now > t) { //值已经过期
         sds key = dictGetKey(de);
         robj *keyobj = createStringObject(key,sdslen(key));
 
@@ -491,7 +491,6 @@ void ttlGenericCommand(client *c, int output_ms) {
         addReplyLongLong(c,output_ms ? ttl : ((ttl+500)/1000));
     }
 }
-
 /* TTL key */
 void ttlCommand(client *c) {
     ttlGenericCommand(c, 0);

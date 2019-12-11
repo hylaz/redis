@@ -814,6 +814,7 @@ void hexistsCommand(client *c) {
     addReply(c, hashTypeExists(o,c->argv[2]->ptr) ? shared.cone : shared.czero);
 }
 
+//hash迭代
 void hscanCommand(client *c) {
     robj *o;
     unsigned long cursor;

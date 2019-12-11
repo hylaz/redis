@@ -4328,7 +4328,10 @@ int moduleRegisterApi(const char *funcname, void *funcptr) {
 
 /* Global initialization at Redis startup. */
 void moduleRegisterCoreAPI(void);
-
+/**
+ * 初始化模块的部分
+ * 
+ */ 
 void moduleInitModulesSystem(void) {
     moduleUnblockedClients = listCreate();
     server.loadmodule_queue = listCreate();

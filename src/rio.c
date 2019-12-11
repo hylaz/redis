@@ -294,7 +294,7 @@ void rioGenericUpdateChecksum(rio *r, const void *buf, size_t len) {
 /* Set the file-based rio object to auto-fsync every 'bytes' file written.
  * By default this is set to zero that means no automatic file sync is
  * performed.
- *
+ * 设置文件是否自动保存
  * This feature is useful in a few contexts since when we rely on OS write
  * buffers sometimes the OS buffers way too much, resulting in too many
  * disk I/O concentrated in very little time. When we fsync in an explicit
